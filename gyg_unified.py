@@ -2602,6 +2602,7 @@ class GYGUnifiedSystem:
             return False
 
     async def run_once(self) -> bool:
+        self.run_once_flag = True
         if not await self.initialize_browser():
             return False
         if not await self.login():
