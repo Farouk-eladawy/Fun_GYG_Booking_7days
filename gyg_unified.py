@@ -159,6 +159,14 @@ class BookingsDatabase:
             else:
                 s_new = normalize_val(v_new)
                 s_old = normalize_val(v_old)
+                
+                # Special handling for arrays/lists like add_ons that are stored as strings
+                if k == "add_ons":
+                    addons_old = sorted([x.strip() for x in s_old.split(';')]) if s_old else []
+                    addons_new = sorted([x.strip() for x in s_new.split(';')]) if s_new else []
+                    if addons_old == addons_new:
+                        continue
+                        
                 if s_new != s_old:
                     try:
                         f1 = float(s_new)
@@ -369,7 +377,10 @@ class AirtableManager:
                             except Exception:
                                 pass
                                 
-                        if k in ["Date Trip", "Real Date Trip"] and len(str_old) >= 10 and len(str_new) >= 10:
+                        if k in ["Date Trip", "Real Date Trip"] and len(str_old) >= 16 and len(str_new) >= 16:
+                            if str_old[:16] == str_new[:16]:
+                                continue
+                        elif k in ["Date Trip", "Real Date Trip"] and len(str_old) >= 10 and len(str_new) >= 10:
                             if str_old[:10] == str_new[:10]:
                                 continue
                                 
@@ -397,6 +408,8 @@ class AirtableManager:
                 else:
                     self.logger.info(f"Creating record in Mirror Base for {booking_nr}")
                     requests.post(self.mirror_api_url, headers=headers, json={"fields": fields, "typecast": True}, timeout=30)
+            else:
+                self.logger.error(f"Failed to fetch Mirror Base for {booking_nr} during sync. Status Code: {mirror_find.status_code}. Response: {mirror_find.text}")
         except Exception as e:
             self.logger.warning(f"Failed to sync to mirror base for {booking_nr}: {e}")
 
@@ -424,7 +437,7 @@ class AirtableManager:
             "Total price EUR": booking.get("total_price_eur"),
             "Retail Price": str(booking.get("retail_price")) if booking.get("retail_price") is not None else None,
             "Revenue": str(booking.get("revenue")) if booking.get("revenue") is not None else None,
-            "Commission Breakdown": float(booking.get("commission_breakdown")) / 100.0 if booking.get("commission_breakdown") is not None else None,
+            "Commission Breakdown": _sanitize_commission(booking.get("commission_breakdown")) / 100.0 if _sanitize_commission(booking.get("commission_breakdown")) is not None else None,
             "Google Maps": booking.get("google_maps"),
             "Hotel Name": booking.get("hotel_name"),
             "Guide": booking.get("guide"),
@@ -491,6 +504,13 @@ class AirtableManager:
             # We skip the main base update to preserve manual edits in the main base.
             if self.mirror_api_url:
                 mirror_find = requests.get(self.mirror_api_url, headers=headers, params=params, timeout=30)
+                
+                if mirror_find.status_code == 429:
+                    self.logger.warning(f"Rate limit hit when checking Mirror Base for {booking.get('booking_nr')}. Waiting 2 seconds.")
+                    import time
+                    time.sleep(2)
+                    mirror_find = requests.get(self.mirror_api_url, headers=headers, params=params, timeout=30)
+                    
                 if mirror_find.status_code == 200:
                     m_data = mirror_find.json() or {}
                     m_records = m_data.get("records") or []
@@ -535,10 +555,17 @@ class AirtableManager:
                                 except Exception:
                                     pass
 
-                            # Handle strings that look like semicolon separated lists (like Add - Ons text)
+                            # Handle strings that look like semicolon or comma separated lists (like Add - Ons text)
                             if k == "Add - Ons":
-                                addons_old = sorted([x.strip() for x in str_old.split(';')]) if str_old else []
-                                addons_new = sorted([x.strip() for x in str_new.split(';')]) if str_new else []
+                                # Sometimes separated by ';' and sometimes by ',' depending on the source
+                                addons_old = sorted([x.strip() for x in str_old.replace(',', ';').split(';')]) if str_old else []
+                                addons_new = sorted([x.strip() for x in str_new.replace(',', ';').split(';')]) if str_new else []
+                                
+                                # Clean up common prefix like '2 x ' or '1 x ' before comparison
+                                import re
+                                addons_old = sorted([re.sub(r'^\d+\s*x\s*', '', x) for x in addons_old if x])
+                                addons_new = sorted([re.sub(r'^\d+\s*x\s*', '', x) for x in addons_new if x])
+                                
                                 if addons_old == addons_new:
                                     continue
                                 else:
@@ -548,10 +575,28 @@ class AirtableManager:
                                     continue
 
                             # Special handling for dates (compare only the first 10 chars YYYY-MM-DD if applicable)
-                            if k in ["Date Trip", "Real Date Trip"] and len(str_old) >= 10 and len(str_new) >= 10:
+                            if k in ["Date Trip", "Real Date Trip"] and len(str_old) >= 16 and len(str_new) >= 16:
+                                # Sometimes Airtable appends 'Z' to floating times in the API response
+                                # We only want to compare the actual numbers YYYY-MM-DDTHH:MM
+                                str_old_time = str_old[:16]
+                                str_new_time = str_new[:16]
+                                if str_old_time == str_new_time:
+                                    continue
+                                else:
+                                    changed_fields[k] = new_val
+                                    is_identical = False
+                                    self.logger.debug(f"Mirror mismatch on {k} (Date/Time): {str_old_time} != {str_new_time}")
+                                    continue
+                            elif k in ["Date Trip", "Real Date Trip"] and len(str_old) >= 10 and len(str_new) >= 10:
+                                # Fallback to Date only comparison if time is missing
                                 if str_old[:10] == str_new[:10]:
                                     continue
-
+                                else:
+                                    changed_fields[k] = new_val
+                                    is_identical = False
+                                    self.logger.debug(f"Mirror mismatch on {k} (Date): {str_old[:10]} != {str_new[:10]}")
+                                    continue
+                                    
                             # Special handling for floats/numbers
                             if isinstance(new_val, (int, float)) or (isinstance(old_val, (int, float)) and old_val != ""):
                                 try:
@@ -567,29 +612,38 @@ class AirtableManager:
                                     
                             if str_new != str_old:
                                 # We only consider it a mismatch if it's not a missing value issue
-                                # e.g. If mirror has a valid value and the new value is empty, we don't overwrite it
-                                # to preserve data unless it's genuinely changed.
-                                # Actually, for the mirror base, we just want to know what changed.
-                                # Let's collect the exact fields that changed instead of just breaking.
                                 changed_fields[k] = new_val
                                 is_identical = False
                                 self.logger.debug(f"Mirror mismatch on {k}: Old='{str_old}' ({type(old_val)}) != New='{str_new}' ({type(new_val)})")
                                 
+                        # Cross-field check to protect manual edits
+                        if "Real Date Trip" in fields and "Real Date Trip" not in changed_fields:
+                            if "Date Trip" in changed_fields:
+                                del changed_fields["Date Trip"]
+                                self.logger.info(f"Protecting manual edit on 'Date Trip' for {booking.get('booking_nr')}")
+                                
+                        if "Real Product Name" in fields and "Real Product Name" not in changed_fields:
+                            if "trip Name" in changed_fields:
+                                del changed_fields["trip Name"]
+                                self.logger.info(f"Protecting manual edit on 'trip Name' for {booking.get('booking_nr')}")
+                                
+                        if len(changed_fields) == 0:
+                            is_identical = True
+
                         if is_identical:
                             self.logger.info(f"Skipping Main Base update for {booking.get('booking_nr')} - Matches Mirror Base perfectly (No new changes from GYG).")
-                            # Even though we skipped Airtable, we return success so local DB is marked synced
                             return {"success": True, "record_id": m_rid, "skipped": True}
                         else:
-                            # We only want to send the fields that actually changed to the Main Base
-                            # However, we must ensure force_update_fields are always included
                             for f_forced in force_update_fields:
                                 if f_forced in fields:
                                     changed_fields[f_forced] = fields[f_forced]
                             
                             self.logger.info(f"Delta detected for {booking.get('booking_nr')}. Only updating changed fields: {list(changed_fields.keys())}")
-                            # Replace the original fields payload with ONLY the changed fields
-                            # This is the magic step that prevents overwriting manual edits in other columns
                             fields = changed_fields
+                    else:
+                        self.logger.info(f"Record {booking.get('booking_nr')} not found in Mirror Base. Proceeding with full update.")
+                else:
+                    self.logger.error(f"Failed to fetch Mirror Base for {booking.get('booking_nr')}. Status Code: {mirror_find.status_code}. Response: {mirror_find.text}")
             # ----------------------------------
 
             
@@ -639,7 +693,7 @@ class AirtableManager:
                     except Exception:
                         pass
                     if patch.status_code == 422:
-                        self.logger.warning(f"Airtable PATCH 422 for {booking.get('booking_nr')}. Possible schema mismatch or missing column.")
+                        self.logger.warning(f"Airtable PATCH 422 for {booking.get('booking_nr')}. Error: {patch.text}")
                     
                     if patch.status_code in (200, 201):
                         return {"success": True, "record_id": rid}
@@ -1040,9 +1094,7 @@ class GYGUnifiedSystem:
            "bookings" in self.page.url:
              self.logger.info("Already logged in (Home/Analytics/Bookings detected). Navigating to Bookings...")
              if "bookings" not in self.page.url:
-                 url = "https://supplier.getyourguide.com/bookings"
-                 if self.managed_by:
-                     url += f"?managed_by={self.managed_by}"
+                 url = self._build_bookings_url()
                  await self.page.goto(url, wait_until="domcontentloaded")
                  await asyncio.sleep(2)
              
@@ -1359,8 +1411,18 @@ class GYGUnifiedSystem:
                         self.logger.info(f"AI extracted Add-Ons: {res['add_ons']}")
                     
                     # Merge participants if AI found them and they look valid
+                    # BUT we must protect against AI hallucinating adults from Add-Ons like "Adult Entry Fee"
+                    # If AI extracted Add_ons that contain "Adult" or "Child" etc, we don't blindly trust the AI's adt count
+                    # Only update if AI explicitly returns integer counts and we haven't extracted them yet, OR we trust AI over current
+                    # Since the scraper already extracts adt, std, chd, inf, youth from the main card quite well,
+                    # we should ONLY use AI's participant counts if the current counts (from the card) are 0 or None.
+                    # Wait, the card extraction logic runs BEFORE fetch_details_from_subpage, but we don't pass the card counts to this function.
+                    # So we should only return AI's counts if they are > 0.
+                    # Actually, the user says the correct number is 2 but AI sent 4.
+                    # So we should be VERY careful with AI participant counts. Let's ONLY use them if they are > 0 AND there are no Add-ons confusing it, or just rely on regex fallback for participants in subpage.
+                    # Let's just merge them if they are returned, but we will add logic in the caller to NOT overwrite card counts if card counts exist and subpage AI is confusing.
                     for k in ["adt", "std", "chd", "inf", "youth"]:
-                        if ai_res.get(k) is not None:
+                        if ai_res.get(k) is not None and isinstance(ai_res.get(k), int):
                             res[k] = ai_res.get(k)
                             
                     # Merge email/phone if found
@@ -1503,6 +1565,8 @@ class GYGUnifiedSystem:
                         t = (await it.text_content() or '').strip()
                         t_lower = t.lower()
                         
+                        is_participant = False
+                        
                         # Match participant counts
                         # Match number at start of string: "2 Adults..." -> 2
                         nm = re.search(r'^(\d+)', t)
@@ -1517,25 +1581,17 @@ class GYGUnifiedSystem:
                             else:
                                 if 'total:' in t_lower:
                                     is_participant = False # Ignore total lines
-                                elif 'adult' in t_lower: res["adt"] += v
-                                elif 'student' in t_lower: res["std"] += v
-                                elif 'children' in t_lower or 'child' in t_lower: res["chd"] += v
-                                elif 'infant' in t_lower: res["inf"] += v
-                                elif 'youth' in t_lower: res["youth"] += v
-                                # Support generic "people" -> Adult
-                                elif ('people' in t_lower or 'person' in t_lower): res["adt"] += v
+                                elif re.search(r'^\s*\d+\s*(x\s*)?adults?\b', t_lower): res["adt"] += v; is_participant = True
+                                elif re.search(r'^\s*\d+\s*(x\s*)?students?\b', t_lower): res["std"] += v; is_participant = True
+                                elif re.search(r'^\s*\d+\s*(x\s*)?(children|child)\b', t_lower): res["chd"] += v; is_participant = True
+                                elif re.search(r'^\s*\d+\s*(x\s*)?infants?\b', t_lower): res["inf"] += v; is_participant = True
+                                elif re.search(r'^\s*\d+\s*(x\s*)?youths?\b', t_lower): res["youth"] += v; is_participant = True
+                                # Support generic "people" -> Adult, but strictly match "X people/person" to avoid matching Add-ons like "Transfer (per person)"
+                                elif re.search(r'^\s*\d+\s*(x\s*)?(people|person)s?\b', t_lower): res["adt"] += v; is_participant = True
                                 else:
                                     is_participant = False # Number found but no keyword match
                         else:
                             is_participant = False
-                        
-                        # Identify Add-Ons
-                        # Logic: If it's not a standard participant line (Adult/Student/Child/Infant/Youth with count), treat as add-on
-                        # Example Add-on: "TutAnghAmoon Tomb entry fee: Adult - €100.00"
-                        # Standard line usually starts with number then type.
-                        
-                        if nm and v <= 50 and 'total:' not in t_lower and any(k in t_lower for k in ['adult', 'student', 'child', 'infant', 'youth']):
-                             is_participant = True
                         
                         if not is_participant and t and 'total:' not in t_lower:
                              # Clean up price if needed, or keep full text
@@ -1701,7 +1757,8 @@ class GYGUnifiedSystem:
                     v = int(nm.group(1)) if nm else 0
                     
                     # Safety: Ignore numbers > 50 (likely prices, ages, or percentages)
-                    if v > 50: 
+                    # Also ignore if it's the price of an add-on (e.g. €20.00)
+                    if v > 50 or (v >= 10 and not re.search(r'^\s*\d+', t)): 
                         v = 0
                     
                     is_participant = False
@@ -1712,20 +1769,28 @@ class GYGUnifiedSystem:
                     if v > 0:
                         if 'total:' in tl:
                              is_participant = False # Ignore total lines
-                        elif 'adult' in tl: adt = v; is_participant = True
-                        elif 'student' in tl: std = v; is_participant = True
-                        elif 'children' in tl or 'child' in tl: chd = v; is_participant = True
-                        elif 'infant' in tl: inf = v; is_participant = True
-                        elif 'youth' in tl: youth = v; is_participant = True
-                        
-                        # Fix for "Total: 4 people" confusion
-                        elif ('people' in tl or 'person' in tl):
-                             # Only use generic "people" if it's NOT a total line (already handled above)
-                             # But wait, the user says "Total: 4 people" appears at the end.
-                             # We should generally ignore "people" if it comes from a "Total" line.
-                             # The check 'total:' in tl handles that.
-                             # What if it's just "4 people"? Then treat as Adult.
-                             adt = v; is_participant = True
+                        elif re.search(r'^\s*\d+\s*(x\s*)?adults?\b', tl):
+                            if adt == 0: adt = v
+                            is_participant = True
+                        elif re.search(r'^\s*\d+\s*(x\s*)?students?\b', tl): std = v; is_participant = True
+                        elif re.search(r'^\s*\d+\s*(x\s*)?(children|child)\b', tl): chd = v; is_participant = True
+                        elif re.search(r'^\s*\d+\s*(x\s*)?infants?\b', tl): inf = v; is_participant = True
+                        elif re.search(r'^\s*\d+\s*(x\s*)?youths?\b', tl): youth = v; is_participant = True
+                        elif re.search(r'^\s*\d+\s*(x\s*)?(people|person)s?\b', tl):
+                            if adt == 0: adt = v
+                            is_participant = True
+                             
+                        # Prevent extracting price (e.g. €20.00) as participant count of 20
+                        # Usually participant counts are at the START of the string, e.g. "2 Adults"
+                        # If the regex found the number but it's not at the very beginning, and it's a large number, reject it
+                        if is_participant and not re.search(r'^\s*\d+', t) and v >= 10:
+                             is_participant = False
+                             if re.search(r'^\s*\d+\s*(x\s*)?adults?\b', tl): adt = 0
+                             elif re.search(r'^\s*\d+\s*(x\s*)?students?\b', tl): std = 0
+                             elif re.search(r'^\s*\d+\s*(x\s*)?(children|child)\b', tl): chd = 0
+                             elif re.search(r'^\s*\d+\s*(x\s*)?infants?\b', tl): inf = 0
+                             elif re.search(r'^\s*\d+\s*(x\s*)?youths?\b', tl): youth = 0
+                             elif re.search(r'^\s*\d+\s*(x\s*)?(people|person)s?\b', tl): adt = 0
                     
                     # If not a standard participant, treat as add-on
                     if not is_participant and t and 'total:' not in tl:
@@ -1748,38 +1813,38 @@ class GYGUnifiedSystem:
                     should_fetch_details = True
                 
                 if should_fetch_details:
-                    # Prefer using the dedicated message link if available, as it is cleaner
-                    msg_btn = await card.query_selector('[data-testid="message-customer"]')
-                    if msg_btn:
-                        href = await msg_btn.get_attribute('href')
-                        if href:
-                            self.logger.info(f"Fetching details for {booking_nr} from subpage (Email missing or AI scan requested)...")
-                            # The user suggests opening in a new tab for better processing
-                            # fetch_details_from_subpage already opens a new context/page, so it effectively does this.
-                            # We just need to ensure we use the correct href.
-                            details = await self.fetch_details_from_subpage(href)
-                            if details.get("email") and not customer_email:
-                                customer_email = details.get("email")
-                                self.logger.info(f"Found email on subpage: {customer_email}")
-                            if details.get("phone") and not customer_phone:
-                                customer_phone = details.get("phone")
-                                self.logger.info(f"Found phone on subpage: {customer_phone}")
-                            
-                            # Update participant counts if found on subpage
-                            # PROTECTIVE LOGIC: Only overwrite if subpage returned actual counts (sum > 0)
-                            # This prevents overwriting valid card data with zeros if subpage fetch failed (e.g. login page)
-                            sub_sum = (details.get("adt") or 0) + (details.get("std") or 0) + (details.get("chd") or 0) + (details.get("inf") or 0) + (details.get("youth") or 0)
-                            
-                            if sub_sum > 0:
-                                adt = details.get("adt"); std = details.get("std"); chd = details.get("chd"); inf = details.get("inf"); youth = details.get("youth")
-                                self.logger.info(f"Updated participants from subpage: A:{adt} S:{std} C:{chd} I:{inf} Y:{youth}")
-                            else:
-                                self.logger.warning(f"Subpage returned 0 participants (possible login/error page). Keeping card data: A:{adt} S:{std} C:{chd} I:{inf} Y:{youth}")
-                            
-                            # Update Add-Ons if found on subpage
-                            if details.get("add_ons"):
-                                add_ons = details.get("add_ons")
-                                self.logger.info(f"Found Add-Ons on subpage: {add_ons}")
+                    # Construct URL directly since GYG often hides or removes the message-customer button
+                    href = f"https://supplier.getyourguide.com/bookings/{booking_nr}"
+                    self.logger.info(f"Fetching details for {booking_nr} from subpage (Email missing or AI scan requested)...")
+                    details = await self.fetch_details_from_subpage(href)
+                    if details.get("email") and not customer_email:
+                        customer_email = details.get("email")
+                        self.logger.info(f"Found email on subpage: {customer_email}")
+                    if details.get("phone") and not customer_phone:
+                        customer_phone = details.get("phone")
+                        self.logger.info(f"Found phone on subpage: {customer_phone}")
+                    
+                    # Update participant counts if found on subpage
+                    # PROTECTIVE LOGIC: Only overwrite if subpage returned actual counts (sum > 0)
+                    # And only if the subpage sum isn't wildly different due to AI confusing Add-ons for Adults
+                    sub_sum = (details.get("adt") or 0) + (details.get("std") or 0) + (details.get("chd") or 0) + (details.get("inf") or 0) + (details.get("youth") or 0)
+                    current_sum = (adt or 0) + (std or 0) + (chd or 0) + (inf or 0) + (youth or 0)
+                    
+                    if sub_sum > 0:
+                        # If the sub_sum > current_sum and there are Add-Ons, it's highly likely AI counted Add-Ons as people.
+                        # So we only accept the subpage counts if they are <= current_sum, or if current_sum == 0.
+                        if current_sum == 0 or sub_sum <= current_sum or not details.get("add_ons"):
+                            adt = details.get("adt"); std = details.get("std"); chd = details.get("chd"); inf = details.get("inf"); youth = details.get("youth")
+                            self.logger.info(f"Updated participants from subpage: A:{adt} S:{std} C:{chd} I:{inf} Y:{youth}")
+                        else:
+                            self.logger.warning(f"Subpage participant sum ({sub_sum}) exceeds card sum ({current_sum}) with Add-ons present. Ignoring subpage participants to avoid AI hallucination. Keeping: A:{adt} S:{std} C:{chd} I:{inf} Y:{youth}")
+                    else:
+                        self.logger.warning(f"Subpage returned 0 participants (possible login/error page). Keeping card data: A:{adt} S:{std} C:{chd} I:{inf} Y:{youth}")
+                    
+                    # Update Add-Ons if found on subpage
+                    if details.get("add_ons"):
+                        add_ons = details.get("add_ons")
+                        self.logger.info(f"Found Add-Ons on subpage: {add_ons}")
             except Exception as e:
                 self.logger.warning(f"Failed to extract customer info or fetch details for {booking_nr}: {e}")
             google_maps = None
@@ -1972,22 +2037,37 @@ class GYGUnifiedSystem:
         return items
 
     async def extract_financial_breakdown(self, card, booking_nr: Optional[str] = None) -> Tuple[Optional[float], Optional[float], Optional[float], Optional[float], Optional[float]]:
-        """Extract totals (retail, revenue, commission) from breakdown table footer row.
-        Steps:
-        1. Ensure breakdown is visible (click button if present)
-        2. Wait for table footer total row
-        3. Parse cells 2,3,4 for amounts and percentage
-        4. Parse commission details for supplier/extra rates
+        """Extract totals (retail, revenue, commission).
+        GYG recently removed the 'Show breakdown' button and directly displays pricing.
         """
+        retail = None; revenue = None; commission = None; supplier_rate = None; extra_rate = None
         try:
-            br = await card.query_selector(self.SELECTORS["show_breakdown_btn"]) 
+            # 1. New GYG Layout: direct pricing text under Pricing section
+            pricing_el = await card.query_selector('[data-testid="booking-detail-comission-breakdown"]')
+            if pricing_el:
+                text = await pricing_el.text_content()
+                retail = self.parse_euro_amount(text)
+                commission = self.parse_commission_rate(text)
+                details = self.parse_commission_details(text)
+                supplier_rate = details.get('supplier_rate')
+                extra_rate = details.get('extra_rate')
+                
+                if retail is not None and commission is not None:
+                    revenue = round(retail * (1 - commission / 100), 2)
+                    return retail, revenue, commission, supplier_rate, extra_rate
+        except Exception as e:
+            pass
+
+        # 2. Fallback to Old GYG Layout (table with tfoot tr)
+        try:
+            br = await card.query_selector('button[aria-label="Show breakdown"], button:has-text("Show breakdown")') 
             if br:
                 await br.click()
                 await asyncio.sleep(0.4)
-            await card.wait_for_selector(self.SELECTORS["breakdown_total_row"], timeout=5000)
+            await card.wait_for_selector(self.SELECTORS["breakdown_total_row"], timeout=3000)
         except Exception:
             pass
-        retail = None; revenue = None; commission = None; supplier_rate = None; extra_rate = None
+
         try:
             total_row = await card.query_selector(self.SELECTORS["breakdown_total_row"]) 
             if not total_row:
@@ -2182,8 +2262,11 @@ class GYGUnifiedSystem:
         if previous_record:
             old_date = str(previous_record.get("date_trip")) if previous_record.get("date_trip") else None
             new_date = str(booking.get("date_trip")) if booking.get("date_trip") else None
+            # Only force update if the actual date has changed in DB
             if old_date and new_date and old_date != new_date:
                 force_update_fields.append("Date Trip")
+                # When Date Trip changes, also force update Real Date Trip
+                force_update_fields.append("Real Date Trip")
 
             old_trip_name = previous_record.get("trip_name")
             new_trip_name = booking.get("trip_name")
@@ -2199,6 +2282,35 @@ class GYGUnifiedSystem:
             code = at_res.get('code') or at_res.get('error')
             self.logger.error(f"Airtable sync failed for {booking.get('booking_nr')} code={code}")
         return False
+
+    def _build_bookings_url(self, page_default: Optional[int] = None) -> str:
+        url = "https://supplier.getyourguide.com/bookings"
+        params = []
+        if self.managed_by:
+            params.append(f"managed_by={self.managed_by}")
+        
+        # Add dynamic date filters for Cairo (from today to 6 days ahead, which covers 7 days inclusive)
+        try:
+            from zoneinfo import ZoneInfo
+            from datetime import datetime, timedelta
+            cairo_tz = ZoneInfo("Africa/Cairo")
+            today_cairo = datetime.now(cairo_tz).date()
+            week_later_cairo = today_cairo + timedelta(days=6)
+            
+            date_from = today_cairo.strftime('%Y-%m-%d')
+            date_to = week_later_cairo.strftime('%Y-%m-%d')
+            params.append(f"filter_activity_date_from={date_from}")
+            params.append(f"filter_activity_date_to={date_to}")
+        except Exception as e:
+            self.logger.error(f"Failed to generate dynamic dates: {e}")
+
+        if page_default is not None:
+            params.append(f"page_default={page_default}")
+
+        if params:
+            url += "?" + "&".join(params)
+        
+        return url
 
     async def _prepare_extraction_page(self, target_url: str) -> bool:
         should_navigate = True
@@ -2232,9 +2344,7 @@ class GYGUnifiedSystem:
         return True
 
     async def run_extraction(self):
-        target_url = "https://supplier.getyourguide.com/bookings"
-        if self.managed_by:
-            target_url += f"?managed_by={self.managed_by}"
+        target_url = self._build_bookings_url()
             
         await self._prepare_extraction_page(target_url)
         
@@ -2261,12 +2371,7 @@ class GYGUnifiedSystem:
             
             if not bookings:
                  self.logger.warning(f"No bookings found on page {page_num} after click. Trying direct URL navigation.")
-                 url = "https://supplier.getyourguide.com/bookings"
-                 if self.managed_by:
-                     url += f"?managed_by={self.managed_by}"
-                     url += f"&page_default={max(0, page_num-1)}"
-                 else:
-                     url += f"?page_default={max(0, page_num-1)}"
+                 url = self._build_bookings_url(page_default=max(0, page_num-1))
                  
                  try:
                      await self.page.goto(url, wait_until="domcontentloaded")
@@ -2380,11 +2485,7 @@ class GYGUnifiedSystem:
 
         # URL Fallback
         try:
-            url = "https://supplier.getyourguide.com/bookings"
-            if self.managed_by:
-                url += f"?managed_by={self.managed_by}&page_default=0"
-            else:
-                url += "?page_default=0"
+            url = self._build_bookings_url(page_default=0)
             
             await self.page.goto(url, wait_until="load")
             try:
@@ -2468,12 +2569,7 @@ class GYGUnifiedSystem:
 
         # 2. URL Fallback
         try:
-            url = "https://supplier.getyourguide.com/bookings"
-            if self.managed_by:
-                url += f"?managed_by={self.managed_by}"
-                url += f"&page_default={max(0, page_number-1)}"
-            else:
-                url += f"?page_default={max(0, page_number-1)}"
+            url = self._build_bookings_url(page_default=max(0, page_number-1))
             
             try:
                  self.logger.info(f"Navigating via URL to page {page_number}: {url}")
@@ -2749,9 +2845,7 @@ class GYGUnifiedSystem:
                 if self.page and "bookings" in self.page.url:
                     self.logger.info("Already on bookings page after restart/login.")
                 else:
-                    url = "https://supplier.getyourguide.com/bookings"
-                    if self.managed_by:
-                        url += f"?managed_by={self.managed_by}"
+                    url = self._build_bookings_url()
                     await self.page.goto(url, wait_until="domcontentloaded")
                 
                 try:
@@ -2829,7 +2923,7 @@ def ai_enhance(api_key: str, text: str, breakdown: str, current: Dict) -> Dict:
         prompt = (
             "Given booking card content and price breakdown, extract corrected fields as JSON. "
             "Focus on extracting 'add_ons' which are extra items, fees, or services listed with prices (e.g. 'Entry Fee', 'Pickup', 'Lunch') that are NOT standard adult/child/student participants. "
-            "If the text contains a list like 'Adult - €100.00', treat it as an add-on if the context implies it's a fee, otherwise check if it's a participant count. "
+            "IMPORTANT for participants: DO NOT count Add-ons (like '2 Entry fee: Adult') as participants. The true participant count is usually found at the top near the date (e.g., '2 participants'). "
             "Only output JSON with keys: trip_name, destination, option_selected, date_trip, total_price_eur, "
             "retail_price, revenue, commission_breakdown, customer_name, customer_email, customer_phone, "
             "hotel_name, guide, adt, std, chd, inf, youth, add_ons (string)."
@@ -2896,6 +2990,16 @@ def _norm_region(s: Optional[str]) -> Optional[str]:
     return None
 
 def extract_region(trip_name: Optional[str], option_selected: Optional[str], card_text: str) -> Optional[str]:
+    # Specific overrides as requested
+    des_overrides = {
+        "Sahl Hasheesh Elite Beach Dive & Coral Reef Experience": "Hurghada",
+        "Marsa Mubarak Sea Turtles Trip with Optional Diving": "Marsa Alam"
+    }
+    
+    trip_name_clean = (trip_name or "").strip()
+    if trip_name_clean in des_overrides:
+        return des_overrides[trip_name_clean]
+
     if trip_name and ":" in trip_name:
         r = trip_name.split(":", 1)[0].strip()
         n = _norm_region(r)
@@ -2917,27 +3021,39 @@ def _parse_date_text(s: Optional[str]) -> Optional[str]:
     t = s.strip()
     for suf in ["st", "nd", "rd", "th"]:
         t = re.sub(rf"\b(\d+)\s*{suf}\b", r"\1", t)
-    m = re.search(r"([A-Za-z]+),\s+([A-Za-z]+)\s+(\d+),\s+(\d{4})\s+(\d{1,2}):(\d{2})\s*(AM|PM)", t)
-    if not m:
-        return None
-    wk, mon, day, year, hh, mm, ap = m.groups()
-    month_map = {
-        "January":1,"February":2,"March":3,"April":4,"May":5,"June":6,
-        "July":7,"August":8,"September":9,"October":10,"November":11,"December":12
-    }
-    mi = month_map.get(mon, 0)
-    if mi == 0:
-        return None
-    h = int(hh)
-    if ap.upper() == "AM":
-        h = 0 if h == 12 else h
-    else:
-        h = 12 if h == 12 else h + 12
     try:
-        dt = datetime(int(year), mi, int(day), h, int(mm))
-        tz = os.getenv("AIRTABLE_TZ_OFFSET", "+02:00")
-        return dt.strftime('%Y-%m-%dT%H:%M:00') + tz
-    except Exception:
+        from zoneinfo import ZoneInfo
+        dt_naive = None
+        try:
+            import dateutil.parser
+            dt_naive = dateutil.parser.parse(t)
+        except ImportError:
+            # Fallback if dateutil is not installed
+            from datetime import datetime
+            # Remove day suffixes for strptime (e.g. 4th -> 4)
+            t_clean = re.sub(r'(?<=\d)(st|nd|rd|th)\b', '', t)
+            # Try a few common formats
+            formats = ['%b %d, %Y %I:%M %p', '%A, %B %d, %Y %I:%M %p', '%Y-%m-%dT%H:%M:%S%z', '%Y-%m-%d %H:%M:%S']
+            for fmt in formats:
+                try:
+                    dt_naive = datetime.strptime(t_clean, fmt)
+                    break
+                except ValueError:
+                    pass
+            if not dt_naive:
+                raise ValueError(f"Could not parse date: {t}")
+        
+        # Localize GYG time to Africa/Cairo, then convert to UTC and append 'Z'
+        if dt_naive.tzinfo is None:
+            dt_cairo = dt_naive.replace(tzinfo=ZoneInfo("Africa/Cairo"))
+        else:
+            dt_cairo = dt_naive.astimezone(ZoneInfo("Africa/Cairo"))
+            
+        dt_utc = dt_cairo.astimezone(ZoneInfo("UTC"))
+        return dt_utc.strftime('%Y-%m-%dT%H:%M:00.000Z')
+    except Exception as e:
+        import logging
+        logging.getLogger(__name__).error(f"Error parsing date '{t}': {e}")
         return None
 
 def _sanitize_commission(v: Optional[object]) -> Optional[float]:
@@ -2997,9 +3113,7 @@ async def _amain(args: List[str]):
         if a.single_page:
             orig = system.run_extraction
             async def run_extraction_single_page():
-                url = "https://supplier.getyourguide.com/bookings"
-                if system.managed_by:
-                    url += f"?managed_by={system.managed_by}"
+                url = system._build_bookings_url()
                 await system.page.goto(url, wait_until="load")
                 await asyncio.sleep(2)
                 bookings = await system.extract_bookings_from_page()
@@ -3017,9 +3131,7 @@ async def _amain(args: List[str]):
         elif a.resync_nrs:
             targets = {s.strip() for s in a.resync_nrs.split(',') if s.strip()}
             async def run_extraction_resync_specific():
-                url = "https://supplier.getyourguide.com/bookings"
-                if system.managed_by:
-                    url += f"?managed_by={system.managed_by}"
+                url = system._build_bookings_url()
                 await system.page.goto(url, wait_until="load")
                 await asyncio.sleep(2)
                 total_synced = 0
@@ -3049,9 +3161,7 @@ async def _amain(args: List[str]):
             # Test mode: extract from specified number of pages
             orig = system.run_extraction
             async def run_extraction_test_pages():
-                url = "https://supplier.getyourguide.com/bookings"
-                if system.managed_by:
-                    url += f"?managed_by={system.managed_by}"
+                url = system._build_bookings_url()
                 await system.page.goto(url, wait_until="load")
                 await asyncio.sleep(2)
                 
