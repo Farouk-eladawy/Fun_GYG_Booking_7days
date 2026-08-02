@@ -1,264 +1,517 @@
-2026-04-17 09:***4:09 - INFO - Booking number extraction (sanitized): GYG996***V9MA4 (raw_match: GYG996***V9MA42)
-2026-04-17 09:***4:09 - INFO - Fetching details for GYG996***V9MA4 from subpage (Email missing or AI scan requested)...
-2026-04-17 09:***4:1*** - WARNING - Error page detected for /bookings/GYG996***V9MA4?from=/bookings?managed_by=707722%26page_default=4 (Attempt 1/3). Retrying...
-2026-04-17 09:***4:23 - WARNING - Error page detected for /bookings/GYG996***V9MA4?from=/bookings?managed_by=707722%26page_default=4 (Attempt 2/3). Retrying...
-2026-04-17 09:***4:31 - WARNING - Error page detected for /bookings/GYG996***V9MA4?from=/bookings?managed_by=707722%26page_default=4 (Attempt 3/3). Retrying...
-2026-04-17 09:***4:38 - WARNING - Email still missing for /bookings/GYG996***V9MA4?from=/bookings?managed_by=707722%26page_default=4 after all attempts.
-2026-04-17 09:***4:38 - INFO - Page text preview: Home  Create  Manage  Bookings 9+  Performance NEW Reviews Finance Ahmed Booking: GYG996***V9MA4 Something went wrong. Help © 2008–2026 GetYourGuide Recommended Tools Reservation System Integration API Integration Supplier Support Contact FAQs Growth Hub About Us About GetYourGuide Customer Website Legal Privacy Policy Legal Notice Supplier Terms and Conditions Cookies and Marketing Preferences
-2026-04-17 09:***4:38 - WARNING - Subpage returned 0 participants (possible login/error page). Keeping card data: A:2 S:0 C:0 I:0 Y:0
-2026-04-17 09:***4:39 - INFO - Extracted GYG996***V9MA4 | trip='Sharm El-Sheikh: Jeep Adventure to Blue Hole, Canyon & Dahab' | price=116.0 | participants A:2 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=116.0 revenue=78.88 comm=32.0
-2026-04-17 09:***4:40 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time VisitorsOption: default |  Option 3 - Giza Pyramids Tour with Optional Museum VisitApr 1***, 2026Friday, April 17th, 2026 12:30 AMGYG7VKZ3A2RM2 people
-2026-04-17 09:***4:40 - INFO - Booking number extraction (sanitized): GYG7VKZ3A2RM (raw_match: GYG7VKZ3A2RM2)
-2026-04-17 09:***4:40 - INFO - Fetching details for GYG7VKZ3A2RM from subpage (Email missing or AI scan requested)...
-2026-04-17 09:***4:47 - INFO - Found email on subpage: customer-f4j4cd4wkj4aexvo@reply.getyourguide.com
-2026-04-17 09:***4:47 - INFO - Updated participants from subpage: A:2 S:0 C:0 I:0 Y:0
-2026-04-17 09:***4:47 - INFO - Extracted GYG7VKZ3A2RM | trip='Hurghada to Cairo: Pyramids & Museum for First-Time Visitors' | price=117.0 | participants A:2 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=117.0 revenue=79.***6 comm=32.0
-2026-04-17 09:***4:47 - INFO - Card text content (first 200 chars): Ras Mohamed Half-Day Adventure The Hidden Paradise EscapeOption: default |  Ras Mohamed Half-Day Adventure The Hidden Paradise EscapeApr 1***, 2026Thursday, April 23rd, 2026 8:00 AMGYG48YV78QXZ2 people 
-2026-04-17 09:***4:47 - INFO - Booking number extraction (sanitized): GYG48YV78QXZ (raw_match: GYG48YV78QXZ2)
-2026-04-17 09:***4:47 - INFO - Card text content (first 200 chars): Ras Mohamed Half-Day Adventure The Hidden Paradise EscapeOption: default |  Ras Mohamed Half-Day Adventure The Hidden Paradise EscapeApr 1***, 2026Thursday, April 16th, 2026 8:00 AMGYGFWV9L***BKF4 people 
-2026-04-17 09:***4:47 - INFO - Booking number extraction (sanitized): GYGFWV9L***BKF (raw_match: GYGFWV9L***BKF4)
-2026-04-17 09:***4:47 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time VisitorsOption: default |  Option 1 - Egyptian Museum & Giza PyramidsApr 1***, 2026Friday, June 26th, 2026 12:30 AMGYG83XKYQA8A2 people - €144.***0Hide 
-2026-04-17 09:***4:47 - INFO - Booking number extraction (sanitized): GYG83XKYQA8A (raw_match: GYG83XKYQA8A2)
-2026-04-17 09:***4:47 - INFO - Card text content (first 200 chars): Hurghada: Full-Day Trip to Cairo by PlaneOption: default |  Option 2 - The Grand Egyptian Museum (GEM) and Giza PyramidsApr 1***, 2026Sunday, April 19th, 2026 4:00 AMGYGRFQRZ2BMX2 people - €***1***.00Hide d
-2026-04-17 09:***4:47 - INFO - Booking number extraction (sanitized): GYGRFQRZ2BMX (raw_match: GYGRFQRZ2BMX2)
-2026-04-17 09:***4:47 - INFO - Card text content (first 200 chars): Ras Mohamed Half-Day Adventure The Hidden Paradise EscapeOption: default |  Ras Mohamed Half-Day Adventure The Hidden Paradise EscapeApr 1***, 2026Saturday, April 18th, 2026 8:00 AMGYGRFQRZ27282 people 
-2026-04-17 09:***4:47 - INFO - Booking number extraction (sanitized): GYGRFQRZ2728 (raw_match: GYGRFQRZ27282)
-2026-04-17 09:***4:47 - INFO - Card text content (first 200 chars): Sharm El-Sheikh: Jeep Adventure to Blue Hole, Canyon & DahabOption: default |  Option 1 - Colored Canyon without Blue Hole & Abu GalumApr 1***, 2026Saturday, April 2***th, 2026 8:00 AMGYGN6B64KYB63 people
-2026-04-17 09:***4:47 - INFO - Booking number extraction (sanitized): GYGN6B64KYB6 (raw_match: GYGN6B64KYB63)
-2026-04-17 09:***4:47 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time VisitorsOption: default |  Option 2 - The Grand Egyptian Museum (GEM) and Giza PyramidsApr 1***, 2026Sunday, May 10th, 2026 12:30 AMGYGX7NHNGNB22 peop
-2026-04-17 09:***4:47 - INFO - Booking number extraction (sanitized): GYGX7NHNGNB2 (raw_match: GYGX7NHNGNB22)
-2026-04-17 09:***4:47 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time VisitorsOption: default |  Option 3 - Giza Pyramids Tour with Optional Museum VisitApr 1***, 2026Sunday, April 26th, 2026 12:30 AMGYG6H8B***WR8***3 people
-2026-04-17 09:***4:47 - INFO - Booking number extraction (sanitized): GYG6H8B***WR8*** (raw_match: GYG6H8B***WR8***3)
-2026-04-17 09:***4:47 - INFO - Card text content (first 200 chars): Sharm El-Sheikh: Jeep Adventure to Blue Hole, Canyon & DahabOption: default |  Option 2-Colored Canyon with Blue Hole & Abu Galum ATV QuadApr 1***, 2026Saturday, April 2***th, 2026 8:00 AMGYG996***V9MA42 pe
-2026-04-17 09:***4:47 - INFO - Booking number extraction (sanitized): GYG996***V9MA4 (raw_match: GYG996***V9MA42)
-2026-04-17 09:***4:47 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time VisitorsOption: default |  Option 3 - Giza Pyramids Tour with Optional Museum VisitApr 1***, 2026Friday, April 17th, 2026 12:30 AMGYG7VKZ3A2RM2 people
-2026-04-17 09:***4:47 - INFO - Booking number extraction (sanitized): GYG7VKZ3A2RM (raw_match: GYG7VKZ3A2RM2)
-2026-04-17 09:***4:47 - INFO - Sync start: GYG48YV78QXZ -> DB + Airtable
-2026-04-17 09:***4:48 - INFO - Patching Airtable GYG48YV78QXZ with fields: ['Agency', 'Booking Nr.', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Customer Country', 'Product ID', 'Total price EUR', 'Option', 'Customer Email', 'Customer Phone', 'Booking Status', 'Commission Breakdown', 'Retail Price', 'Revenue', 'Real Product Name', 'Real Date Trip']
-2026-04-17 09:***4:48 - INFO - Airtable synced GYG48YV78QXZ record_id=recQwqCgIx7KceiXV
-2026-04-17 09:***4:48 - INFO - Sync start: GYGFWV9L***BKF -> DB + Airtable
-2026-04-17 09:***4:49 - INFO - Patching Airtable GYGFWV9L***BKF with fields: ['Agency', 'Booking Nr.', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Customer Country', 'Product ID', 'Total price EUR', 'Option', 'Customer Email', 'Customer Phone', 'Booking Status', 'Commission Breakdown', 'Retail Price', 'Revenue', 'Real Product Name', 'Real Date Trip']
-2026-04-17 09:***4:49 - INFO - Airtable synced GYGFWV9L***BKF record_id=recLVXaFSefUjGSWq
-2026-04-17 09:***4:49 - INFO - Sync start: GYG83XKYQA8A -> DB + Airtable
-2026-04-17 09:***4:***0 - INFO - Patching Airtable GYG83XKYQA8A with fields: ['Agency', 'Booking Nr.', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Customer Country', 'Product ID', 'Total price EUR', 'Option', 'Customer Email', 'Customer Phone', 'Booking Status', 'Commission Breakdown', 'Retail Price', 'Revenue', 'Real Product Name', 'Real Date Trip']
-2026-04-17 09:***4:***0 - INFO - Airtable synced GYG83XKYQA8A record_id=rec7BjNtuOCMacpj7
-2026-04-17 09:***4:***0 - INFO - Sync start: GYGRFQRZ2BMX -> DB + Airtable
-2026-04-17 09:***4:***1 - INFO - Patching Airtable GYGRFQRZ2BMX with fields: ['Agency', 'Booking Nr.', 'Add - Ons', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Customer Country', 'Product ID', 'Total price EUR', 'Option', 'Customer Email', 'Customer Phone', 'Booking Status', 'Commission Breakdown', 'Retail Price', 'Revenue', 'Real Product Name', 'Real Date Trip']
-2026-04-17 09:***4:***1 - INFO - Airtable synced GYGRFQRZ2BMX record_id=recZ0AhBKAUH1N7BU
-2026-04-17 09:***4:***1 - INFO - Sync start: GYGRFQRZ2728 -> DB + Airtable
-2026-04-17 09:***4:***2 - INFO - Patching Airtable GYGRFQRZ2728 with fields: ['Agency', 'Booking Nr.', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Customer Country', 'Product ID', 'Total price EUR', 'Option', 'Customer Email', 'Customer Phone', 'Booking Status', 'Commission Breakdown', 'Retail Price', 'Revenue', 'Real Product Name', 'Real Date Trip']
-2026-04-17 09:***4:***2 - INFO - Airtable synced GYGRFQRZ2728 record_id=recYnmHn8CC4BRu6R
-2026-04-17 09:***4:***2 - INFO - Sync start: GYGN6B64KYB6 -> DB + Airtable
-2026-04-17 09:***4:***2 - INFO - Patching Airtable GYGN6B64KYB6 with fields: ['Agency', 'Booking Nr.', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Customer Country', 'Product ID', 'Total price EUR', 'Option', 'Customer Email', 'Customer Phone', 'Booking Status', 'Commission Breakdown', 'Retail Price', 'Revenue', 'Real Product Name', 'Real Date Trip']
-2026-04-17 09:***4:***3 - INFO - Airtable synced GYGN6B64KYB6 record_id=recHesT64drnNDLtt
-2026-04-17 09:***4:***3 - INFO - Sync start: GYGX7NHNGNB2 -> DB + Airtable
-2026-04-17 09:***4:***3 - INFO - Patching Airtable GYGX7NHNGNB2 with fields: ['Agency', 'Booking Nr.', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Customer Country', 'Product ID', 'Total price EUR', 'Option', 'Customer Email', 'Customer Phone', 'Booking Status', 'Commission Breakdown', 'Retail Price', 'Revenue', 'Real Product Name', 'Real Date Trip']
-2026-04-17 09:***4:***4 - INFO - Airtable synced GYGX7NHNGNB2 record_id=receYn7FQJiDQ0ddP
-2026-04-17 09:***4:***4 - INFO - Sync start: GYG6H8B***WR8*** -> DB + Airtable
-2026-04-17 09:***4:***4 - INFO - Patching Airtable GYG6H8B***WR8*** with fields: ['Agency', 'Booking Nr.', 'Add - Ons', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Customer Country', 'Product ID', 'Total price EUR', 'Option', 'Customer Email', 'Customer Phone', 'Booking Status', 'Commission Breakdown', 'Retail Price', 'Revenue', 'Real Product Name', 'Real Date Trip']
-2026-04-17 09:***4:*** - INFO - Airtable synced GYG6H8B***WR8*** record_id=recZoxIqpNbForvC9
-2026-04-17 09:***4:*** - INFO - Sync start: GYG996***V9MA4 -> DB + Airtable
-2026-04-17 09:***4:*** - INFO - Patching Airtable GYG996***V9MA4 with fields: ['Agency', 'Booking Nr.', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Customer Country', 'Product ID', 'Total price EUR', 'Option', 'Customer Phone', 'Booking Status', 'Commission Breakdown', 'Retail Price', 'Revenue', 'Real Product Name', 'Real Date Trip']
-2026-04-17 09:***4:***6 - INFO - Airtable synced GYG996***V9MA4 record_id=recJy7mOCWbCKgVno
-2026-04-17 09:***4:***6 - INFO - Sync start: GYG7VKZ3A2RM -> DB + Airtable
-2026-04-17 09:***4:***6 - INFO - Patching Airtable GYG7VKZ3A2RM with fields: ['Agency', 'Booking Nr.', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Customer Country', 'Product ID', 'Total price EUR', 'Option', 'Customer Email', 'Customer Phone', 'Booking Status', 'Commission Breakdown', 'Retail Price', 'Revenue', 'Real Product Name', 'Real Date Trip']
-2026-04-17 09:***4:***7 - INFO - Airtable synced GYG7VKZ3A2RM record_id=reca8QLzZphK8s1p4
-2026-04-17 09:***4:***7 - INFO - Reached maximum page limit (***) — wrapping to first page
-2026-04-17 09:***4:***7 - INFO - Run once flag is set, exiting extraction loop.
-1s
-Run git config --global user.name "github-actions[bot]"
- create mode 100644 browser_profile/Default/Code Cache/js/6ef9db4***f80b193***_0
- create mode 100644 browser_profile/Default/Code Cache/js/706a4c6101307070_0
- create mode 100644 browser_profile/Default/Code Cache/js/71a6f8b8faa3413a_0
- create mode 100644 browser_profile/Default/Code Cache/js/721d1647a9744277_0
- create mode 100644 browser_profile/Default/Code Cache/js/7288c9007609a82f_0
- create mode 100644 browser_profile/Default/Code Cache/js/72d09c4d601987f4_0
- create mode 100644 browser_profile/Default/Code Cache/js/734de3***04d76c9e2_0
- create mode 100644 browser_profile/Default/Code Cache/js/74337ee1e84***0203_0
- create mode 100644 browser_profile/Default/Code Cache/js/7***9d0ca9901e8420_0
- create mode 100644 browser_profile/Default/Code Cache/js/76e21ac6b12c***44d_0
- create mode 100644 browser_profile/Default/Code Cache/js/7b239201e84ffd39_0
- create mode 100644 browser_profile/Default/Code Cache/js/7b8e703088a22c8f_0
- create mode 100644 browser_profile/Default/Code Cache/js/7d3***0ee99f2***9b48_0
- create mode 100644 browser_profile/Default/Code Cache/js/7d9fe3e4b***368c48_0
- create mode 100644 browser_profile/Default/Code Cache/js/7e9f07b204e1***3d_0
- create mode 100644 browser_profile/Default/Code Cache/js/7ecfbf7cace***63fe_0
- create mode 100644 browser_profile/Default/Code Cache/js/80410d7a81c7dd4e_0
- create mode 100644 browser_profile/Default/Code Cache/js/806d084a803ad330_0
- create mode 100644 browser_profile/Default/Code Cache/js/81ab3c7a1fa8f4***f_0
- create mode 100644 browser_profile/Default/Code Cache/js/81fefcc76***3cf741_0
- create mode 100644 browser_profile/Default/Code Cache/js/83a***3cc9f4b8***8db_0
- create mode 100644 browser_profile/Default/Code Cache/js/84a0823ce33e2bb7_0
- create mode 100644 browser_profile/Default/Code Cache/js/84c894c13e***4b79a_0
- create mode 100644 browser_profile/Default/Code Cache/js/84d9427c***c74ea***1_0
- create mode 100644 browser_profile/Default/Code Cache/js/8***17b10abac8b49e_0
- create mode 100644 browser_profile/Default/Code Cache/js/874***f76***00c122d7_0
- create mode 100644 browser_profile/Default/Code Cache/js/886a9e8e14cd3c98_0
- create mode 100644 browser_profile/Default/Code Cache/js/889d99224829897f_0
- create mode 100644 browser_profile/Default/Code Cache/js/88fc9d1***09a6d176_0
- create mode 100644 browser_profile/Default/Code Cache/js/8943e1bea7d9***c***a_0
- create mode 100644 browser_profile/Default/Code Cache/js/8966662bd***109010_0
- create mode 100644 browser_profile/Default/Code Cache/js/8d47d6ed4fe6bd***e_0
- create mode 100644 browser_profile/Default/Code Cache/js/8d6f0dac6bb***3d8f_0
- create mode 100644 browser_profile/Default/Code Cache/js/8db8096ff***dc1fa4_0
- create mode 100644 browser_profile/Default/Code Cache/js/8e1303038f1964ba_0
- create mode 100644 browser_profile/Default/Code Cache/js/8e37904ea1dad8b2_0
- create mode 100644 browser_profile/Default/Code Cache/js/8ef9e3d63***cf4eb9_0
- create mode 100644 browser_profile/Default/Code Cache/js/8f0078883464***ef0_0
- create mode 100644 browser_profile/Default/Code Cache/js/8f698772fdc3a412_0
- create mode 100644 browser_profile/Default/Code Cache/js/8fd1d86e98c7a807_0
- create mode 100644 browser_profile/Default/Code Cache/js/917990dde427b060_0
- create mode 100644 browser_profile/Default/Code Cache/js/91a98046acc1c***b7_0
- create mode 100644 browser_profile/Default/Code Cache/js/92462c***f2dde3cea_0
- create mode 100644 browser_profile/Default/Code Cache/js/92cf3***eafeefe***a6_0
- create mode 100644 browser_profile/Default/Code Cache/js/93fb188832***0***30c_0
- create mode 100644 browser_profile/Default/Code Cache/js/9***48c***0d3c***0d4b6_0
- create mode 100644 browser_profile/Default/Code Cache/js/9690f***7bfa9863b0_0
- create mode 100644 browser_profile/Default/Code Cache/js/978b20fcb69d8d46_0
- create mode 100644 browser_profile/Default/Code Cache/js/980c08***71c71768d_0
- create mode 100644 browser_profile/Default/Code Cache/js/9847***abaf14e***9da_0
- create mode 100644 browser_profile/Default/Code Cache/js/98ab1b2fa66d6be8_0
- create mode 100644 browser_profile/Default/Code Cache/js/9a***fdfe8d9bd6***76_0
- create mode 100644 browser_profile/Default/Code Cache/js/9ae6398***f1c***c028_0
- create mode 100644 browser_profile/Default/Code Cache/js/9f32cddf81aa09aa_0
- create mode 100644 browser_profile/Default/Code Cache/js/9f8ec269fee67af1_0
- create mode 100644 browser_profile/Default/Code Cache/js/a18214f8d4838a83_0
- create mode 100644 browser_profile/Default/Code Cache/js/a1b9da204***8612a3_0
- create mode 100644 browser_profile/Default/Code Cache/js/a1e***38ea***dbfc***da_0
- create mode 100644 browser_profile/Default/Code Cache/js/a2df818f22cb4f90_0
- create mode 100644 browser_profile/Default/Code Cache/js/a3c0fa***70fb08b83_0
- create mode 100644 browser_profile/Default/Code Cache/js/a4c4b1b0422230d7_0
- create mode 100644 browser_profile/Default/Code Cache/js/a***781613b0***4***4***c_0
- create mode 100644 browser_profile/Default/Code Cache/js/a600ddf72f9a1b07_0
- create mode 100644 browser_profile/Default/Code Cache/js/a68e9bf877039***db_0
- create mode 100644 browser_profile/Default/Code Cache/js/aa7c19dada2a09f8_0
- create mode 100644 browser_profile/Default/Code Cache/js/aa81f11e***ae8dd***7_0
- create mode 100644 browser_profile/Default/Code Cache/js/aaa3f***81a6***0ad6_0
- create mode 100644 browser_profile/Default/Code Cache/js/aae77***3ac360ba33_0
- create mode 100644 browser_profile/Default/Code Cache/js/abbf***209b8d8a94a_0
- create mode 100644 browser_profile/Default/Code Cache/js/ac688a70aeba9086_0
- create mode 100644 browser_profile/Default/Code Cache/js/ad9cfee497133970_0
- create mode 100644 browser_profile/Default/Code Cache/js/ade043e1789***fbe2_0
- create mode 100644 browser_profile/Default/Code Cache/js/ae26bd22fd***0df8_0
- create mode 100644 browser_profile/Default/Code Cache/js/aeedc2ab0a92e04d_0
- create mode 100644 browser_profile/Default/Code Cache/js/b1***a***edba71***3f33_0
- create mode 100644 browser_profile/Default/Code Cache/js/b1a68947ef63c297_0
- create mode 100644 browser_profile/Default/Code Cache/js/b1c***3691d***9f708e_0
- create mode 100644 browser_profile/Default/Code Cache/js/b3a***3afde***0b1aab_0
- create mode 100644 browser_profile/Default/Code Cache/js/b4f27***e7cdda73a8_0
- create mode 100644 browser_profile/Default/Code Cache/js/b781bc4***f97daa***_0
- create mode 100644 browser_profile/Default/Code Cache/js/b79c8fedf6de99e4_0
- create mode 100644 browser_profile/Default/Code Cache/js/b80d3ea27f703fdd_0
- create mode 100644 browser_profile/Default/Code Cache/js/b991a16b80dcc81d_0
- create mode 100644 browser_profile/Default/Code Cache/js/bc14f2e0b981333a_0
- create mode 100644 browser_profile/Default/Code Cache/js/bd***e7ea88947eece_0
- create mode 100644 browser_profile/Default/Code Cache/js/bdb1f1fc216b3a***1_0
- create mode 100644 browser_profile/Default/Code Cache/js/be4fb***b87437aeac_0
- create mode 100644 browser_profile/Default/Code Cache/js/be83d6da361869f***_0
- create mode 100644 browser_profile/Default/Code Cache/js/c1682807f094eed6_0
- create mode 100644 browser_profile/Default/Code Cache/js/c26282dcca8a080a_0
- create mode 100644 browser_profile/Default/Code Cache/js/c27***392007***01943_0
- create mode 100644 browser_profile/Default/Code Cache/js/c3291bc8b47***b7cc_0
- create mode 100644 browser_profile/Default/Code Cache/js/c749e93d***fa***7f9a_0
- create mode 100644 browser_profile/Default/Code Cache/js/c7***cafb2678a9227_0
- create mode 100644 browser_profile/Default/Code Cache/js/c7c0***cbfd461***393_0
- create mode 100644 browser_profile/Default/Code Cache/js/c8eb***e0***cf9e87d3_0
- create mode 100644 browser_profile/Default/Code Cache/js/c9abf82f***117a62_0
- create mode 100644 browser_profile/Default/Code Cache/js/c9aff890189ecd8b_0
- create mode 100644 browser_profile/Default/Code Cache/js/ca4322***9069f03b0_0
- create mode 100644 browser_profile/Default/Code Cache/js/cae442b0664c8ef7_0
- create mode 100644 browser_profile/Default/Code Cache/js/cc1b9ceaf1d8d1fa_0
- create mode 100644 browser_profile/Default/Code Cache/js/cc***8e0f0e***74***4c4_0
- create mode 100644 browser_profile/Default/Code Cache/js/cd0cbf47a6d1aa88_0
- create mode 100644 browser_profile/Default/Code Cache/js/cd32e240***3c084f8_0
- create mode 100644 browser_profile/Default/Code Cache/js/cd43cdd611f7f6f7_0
- create mode 100644 browser_profile/Default/Code Cache/js/cd88f08f99acb8ec_0
- create mode 100644 browser_profile/Default/Code Cache/js/cdd1f71383ff0044_0
- create mode 100644 browser_profile/Default/Code Cache/js/ce66ac3bf08ff0e0_0
- create mode 100644 browser_profile/Default/Code Cache/js/cecc341***029f10c7_0
- create mode 100644 browser_profile/Default/Code Cache/js/cfbced0***069***d197_0
- create mode 100644 browser_profile/Default/Code Cache/js/d0c4db3bdb4d429f_0
- create mode 100644 browser_profile/Default/Code Cache/js/d1398e7afa86b9***c_0
- create mode 100644 browser_profile/Default/Code Cache/js/d1e3d4ae486***ac4_0
- create mode 100644 browser_profile/Default/Code Cache/js/d26bf82f0e3830e6_0
- create mode 100644 browser_profile/Default/Code Cache/js/d2b98b1b80f4cd0f_0
- create mode 100644 browser_profile/Default/Code Cache/js/d***44989796efa8dd_0
- create mode 100644 browser_profile/Default/Code Cache/js/d7636c213fa***bcde_0
- create mode 100644 browser_profile/Default/Code Cache/js/d76***60327df7fbb4_0
- create mode 100644 browser_profile/Default/Code Cache/js/da7320e14d890cca_0
- create mode 100644 browser_profile/Default/Code Cache/js/db41fb7***81***6***077_0
- create mode 100644 browser_profile/Default/Code Cache/js/dbc300f77c2bb7ad_0
- create mode 100644 browser_profile/Default/Code Cache/js/dc4***6cd93***0db0ed_0
- create mode 100644 browser_profile/Default/Code Cache/js/dcd0116d4eb042ab_0
- create mode 100644 browser_profile/Default/Code Cache/js/dce***21694166fcaa_0
- create mode 100644 browser_profile/Default/Code Cache/js/dd176fe434dcb169_0
- create mode 100644 browser_profile/Default/Code Cache/js/dd8793172***64c821_0
- create mode 100644 browser_profile/Default/Code Cache/js/def43e878de6048c_0
- create mode 100644 browser_profile/Default/Code Cache/js/e00c91081b92a82d_0
- create mode 100644 browser_profile/Default/Code Cache/js/e1b28802fb0cc1cf_0
- create mode 100644 browser_profile/Default/Code Cache/js/e2222ab60bba63db_0
- create mode 100644 browser_profile/Default/Code Cache/js/e4a8***d32cc***7***fc_0
- create mode 100644 browser_profile/Default/Code Cache/js/e***d0b7d4c74b9260_0
- create mode 100644 browser_profile/Default/Code Cache/js/e6***0e97337f***4ead_0
- create mode 100644 browser_profile/Default/Code Cache/js/e6ca8febf4046811_0
- create mode 100644 browser_profile/Default/Code Cache/js/e70d1c394884ebac_0
- create mode 100644 browser_profile/Default/Code Cache/js/e906c1961eba2147_0
- create mode 100644 browser_profile/Default/Code Cache/js/e91cff4c81***d***cd_0
- create mode 100644 browser_profile/Default/Code Cache/js/ea7ca7e61b3339e4_0
- create mode 100644 browser_profile/Default/Code Cache/js/ec0487134082bd07_0
- create mode 100644 browser_profile/Default/Code Cache/js/ec***1c14a9caf62d6_0
- create mode 100644 browser_profile/Default/Code Cache/js/eda0cbf3808f6d08_0
- create mode 100644 browser_profile/Default/Code Cache/js/edba014ab14***486e_0
- create mode 100644 browser_profile/Default/Code Cache/js/ee044f3e23422444_0
- create mode 100644 browser_profile/Default/Code Cache/js/efb8f3e1a42bf4a3_0
- create mode 100644 browser_profile/Default/Code Cache/js/f07dd0a312c4cac0_0
- create mode 100644 browser_profile/Default/Code Cache/js/f0f64b0dce8e0***f0_0
- create mode 100644 browser_profile/Default/Code Cache/js/f16e338e***3a7437e_0
- create mode 100644 browser_profile/Default/Code Cache/js/f2148fe2cc9a1dcc_0
- create mode 100644 browser_profile/Default/Code Cache/js/f2f60c094***b79a16_0
- create mode 100644 browser_profile/Default/Code Cache/js/f34a9db118***0e82e_0
- create mode 100644 browser_profile/Default/Code Cache/js/f***7***b4110cfa8262_0
- create mode 100644 browser_profile/Default/Code Cache/js/f***8b***14b2920ff34_0
- create mode 100644 browser_profile/Default/Code Cache/js/f***c83242e29087b1_0
- create mode 100644 browser_profile/Default/Code Cache/js/f60b042910996c10_0
- create mode 100644 browser_profile/Default/Code Cache/js/f61***b72c***227fc11_0
- create mode 100644 browser_profile/Default/Code Cache/js/f72cb1***cee0d40a8_0
- create mode 100644 browser_profile/Default/Code Cache/js/f91fcf0e3cb41741_0
- create mode 100644 browser_profile/Default/Code Cache/js/fa***3baf36***3439c7_0
- create mode 100644 browser_profile/Default/Code Cache/js/fa9bb7d6d90***db_0
- create mode 100644 browser_profile/Default/Code Cache/js/fc817f2d727fad41_0
- create mode 100644 browser_profile/Default/Code Cache/js/fd21c***300b6e43c3_0
- create mode 100644 browser_profile/Default/Code Cache/js/fe***7939083***2e6***_0
- create mode 100644 browser_profile/Default/Code Cache/js/ff78f39b63bda9db_0
- create mode 100644 browser_profile/Default/Code Cache/js/ffde49293463***088_0
- delete mode 100644 browser_profile/Default/DIPS-wal
- delete mode 100644 browser_profile/Default/Session Storage/071649.ldb
- delete mode 100644 browser_profile/Default/Session Storage/0716***0.ldb
- delete mode 100644 browser_profile/Default/Session Storage/0716***1.ldb
- delete mode 100644 browser_profile/Default/Session Storage/0716***3.ldb
- delete mode 100644 browser_profile/Default/Session Storage/0716***.ldb
- create mode 100644 browser_profile/Default/Session Storage/071662.ldb
- create mode 100644 browser_profile/Default/Session Storage/071663.ldb
- create mode 100644 browser_profile/Default/Session Storage/071664.ldb
- delete mode 100644 browser_profile/Default/SharedStorage-wal
-error: cannot pull with rebase: You have unstaged changes.
-error: Please commit or stash them.
-Error: Process completed with exit code 128.
-0s
-0s
-Post job cleanup.
-/usr/bin/git version
-git version 2.***3.0
-Copying '/home/runner/.gitconfig' to '/home/runner/work/_temp/***cba884d-8a24-4143-b73d-039***a8b72424/.gitconfig'
-Temporarily overriding HOME='/home/runner/work/_temp/***cba884d-8a24-4143-b73d-039***a8b72424' before making global git config changes
-Adding repository directory to the temporary git global config as a safe directory
-/usr/bin/git config --global --add safe.directory /home/runner/work/FTS_GYG_Booking/FTS_GYG_Booking
-/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-http.https://github.com/.extraheader
-/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
-/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-0s
+Run python gyg_unified.py --once
+2026-07-03 12:***6:4*** - INFO - Browser initialized with chat blocking enabled
+2026-07-03 12:***6:***8 - INFO - Already logged in (Home/Analytics/Bookings detected). Navigating to Bookings...
+2026-07-03 12:***7:02 - INFO - Already on bookings page. Skipping initial navigation.
+2026-07-03 12:***7:04 - INFO - Already on page 1
+2026-07-03 12:***7:04 - INFO - Extracting from page 1
+2026-07-03 12:***7:0*** - INFO - Found 20 booking cards on page
+2026-07-03 12:***7:07 - INFO - Card text content (first 200 chars): Sharm Signature Experience: Mosque, Cathedral & Old Marketdefault |  Option 1: Mosque, Cathedral & Old Market TourSpecify pickup timeMissingAug 19, 2026 ***:00 PM3 participantsGYGN6B3L7K6B Jul 3, 2026Hi
+2026-07-03 12:***7:07 - INFO - Booking number extraction (sanitized): GYGN6B3L7K6B (raw_match: GYGN6B3L7K6B)
+2026-07-03 12:***7:12 - INFO - Extracted GYGN6B3L7K6B | trip='Sharm Signature Experience: Mosque, Cathedral & Old Market' | price=None | participants A:3 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 12:***7:13 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time Visitorsdefault |  Option 1 - Egyptian Museum & Giza PyramidsSpecify pickup timeMissingJul 11, 2026 12:30 AM2 participantsGYG83XFGH8W2 Jul 3, 2026Hi
+2026-07-03 12:***7:13 - INFO - Booking number extraction (sanitized): GYG83XFGH8W2 (raw_match: GYG83XFGH8W2)
+2026-07-03 12:***7:18 - INFO - Extracted GYG83XFGH8W2 | trip='Hurghada to Cairo: Pyramids & Museum for First-Time Visitors' | price=None | participants A:2 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 12:***7:20 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Small Group -Karnak, Hatshepsut, and the Valley of the KingsSpecify pickup timeMissingJul 8, 2026 4:00 AM2 participantsGYGX7NA676Z
+2026-07-03 12:***7:20 - INFO - Booking number extraction (sanitized): GYGX7NA676Z2 (raw_match: GYGX7NA676Z2)
+2026-07-03 12:***7:2*** - INFO - Extracted GYGX7NA676Z2 | trip='Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Trip' | price=None | participants A:2 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 12:***7:27 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time Visitorsdefault |  Option 1 - Egyptian Museum & Giza PyramidsSpecify pickup timeMissingDec 12, 2026 12:30 AM1 participantGYG83XFGK4Q9 Jul 3, 2026Hid
+2026-07-03 12:***7:27 - INFO - Booking number extraction (sanitized): GYG83XFGK4Q9 (raw_match: GYG83XFGK4Q9)
+2026-07-03 12:***7:32 - INFO - Extracted GYG83XFGK4Q9 | trip='Hurghada to Cairo: Pyramids & Museum for First-Time Visitors' | price=None | participants A:1 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 12:***7:33 - INFO - Card text content (first 200 chars): Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunchdefault |  Option 2 Quad Bike Adventure,3 Pools, Camel,Red Canyon&LunchSpecify pickup timeMissingJul 17, 2026 8:00 AM4 participantsGYG7VKWK***XM
+2026-07-03 12:***7:33 - INFO - Booking number extraction (sanitized): GYG7VKWK***XM2 (raw_match: GYG7VKWK***XM2)
+2026-07-03 12:***7:38 - INFO - Extracted GYG7VKWK***XM2 | trip='Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunch' | price=None | participants A:4 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 12:***7:40 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Karnak, Hatshepsut,Valley of the Kings with King TutankhamunSpecify pickup timeUrgentJul 4, 2026 4:00 AM1 participantGYG2Q9HZ8***6M 
+2026-07-03 12:***7:40 - INFO - Booking number extraction (sanitized): GYG2Q9HZ8***6M (raw_match: GYG2Q9HZ8***6M)
+2026-07-03 12:***7:4*** - INFO - Extracted GYG2Q9HZ8***6M | trip='Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Trip' | price=None | participants A:1 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 12:***7:47 - INFO - Card text content (first 200 chars): Hurghada: Full-Day Trip to Cairo by PlaneEGM & Giza Pyramids |  Option 1 - The Egyptian Museum and Giza PyramidsSpecify pickup timeMissingJul ***, 2026 4:00 AM3 participantsGYG32L4XR89A Jul 3, 2026Hide 
+2026-07-03 12:***7:47 - INFO - Booking number extraction (sanitized): GYG32L4XR89A (raw_match: GYG32L4XR89A)
+2026-07-03 12:***7:***2 - INFO - Extracted GYG32L4XR89A | trip='Hurghada: Full-Day Trip to Cairo by Plane' | price=None | participants A:2 S:0 C:1 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 12:***7:***3 - INFO - Card text content (first 200 chars): Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunchdefault |  Option 1 - 3 Pools Tour, Camel, Red Canyon included LunchSpecify pickup timeMissingJul 18, 2026 8:00 AM4 participantsGYGBLHK8ML24 J
+2026-07-03 12:***7:***3 - INFO - Booking number extraction (sanitized): GYGBLHK8ML24 (raw_match: GYGBLHK8ML24)
+2026-07-03 12:***7:***8 - INFO - Extracted GYGBLHK8ML24 | trip='Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunch' | price=None | participants A:4 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 12:***8:00 - INFO - Card text content (first 200 chars): Hurghada: Luxor Karnak, Hatshepsut & the Valley of the Kingsdefault |  Karnak + Valley of the Kings + Hatshepsut + MealsSpecify pickup timeUrgentJul 4, 2026 ***:00 AM3 participantsGYG32L4XVGHW Jul 3, 20
+2026-07-03 12:***8:00 - INFO - Booking number extraction (sanitized): GYG32L4XVGHW (raw_match: GYG32L4XVGHW)
+2026-07-03 12:***8:0*** - INFO - Extracted GYG32L4XVGHW | trip='Hurghada: Luxor Karnak, Hatshepsut & the Valley of the Kings' | price=None | participants A:3 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 12:***8:07 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Small Group -Karnak, Hatshepsut, and the Valley of the KingsSpecify pickup timeUrgentJul 4, 2026 4:00 AM4 participantsGYGBLHK8NWLB
+2026-07-03 12:***8:07 - INFO - Booking number extraction (sanitized): GYGBLHK8NWLB (raw_match: GYGBLHK8NWLB)
+2026-07-03 12:***8:12 - INFO - Extracted GYGBLHK8NWLB | trip='Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Trip' | price=None | participants A:2 S:0 C:0 I:2 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 12:***8:12 - INFO - Card text content (first 200 chars): Sharm Signature Experience: Mosque, Cathedral & Old Marketdefault |  Option 1: Mosque, Cathedral & Old Market TourSpecify pickup timeMissingAug 19, 2026 ***:00 PM3 participantsGYGN6B3L7K6B Jul 3, 2026Hi
+2026-07-03 12:***8:12 - INFO - Booking number extraction (sanitized): GYGN6B3L7K6B (raw_match: GYGN6B3L7K6B)
+2026-07-03 12:***8:12 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time Visitorsdefault |  Option 1 - Egyptian Museum & Giza PyramidsSpecify pickup timeMissingJul 11, 2026 12:30 AM2 participantsGYG83XFGH8W2 Jul 3, 2026Hi
+2026-07-03 12:***8:12 - INFO - Booking number extraction (sanitized): GYG83XFGH8W2 (raw_match: GYG83XFGH8W2)
+2026-07-03 12:***8:12 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Small Group -Karnak, Hatshepsut, and the Valley of the KingsSpecify pickup timeMissingJul 8, 2026 4:00 AM2 participantsGYGX7NA676Z
+2026-07-03 12:***8:12 - INFO - Booking number extraction (sanitized): GYGX7NA676Z2 (raw_match: GYGX7NA676Z2)
+2026-07-03 12:***8:12 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time Visitorsdefault |  Option 1 - Egyptian Museum & Giza PyramidsSpecify pickup timeMissingDec 12, 2026 12:30 AM1 participantGYG83XFGK4Q9 Jul 3, 2026Hid
+2026-07-03 12:***8:12 - INFO - Booking number extraction (sanitized): GYG83XFGK4Q9 (raw_match: GYG83XFGK4Q9)
+2026-07-03 12:***8:12 - INFO - Card text content (first 200 chars): Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunchdefault |  Option 2 Quad Bike Adventure,3 Pools, Camel,Red Canyon&LunchSpecify pickup timeMissingJul 17, 2026 8:00 AM4 participantsGYG7VKWK***XM
+2026-07-03 12:***8:12 - INFO - Booking number extraction (sanitized): GYG7VKWK***XM2 (raw_match: GYG7VKWK***XM2)
+2026-07-03 12:***8:12 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Karnak, Hatshepsut,Valley of the Kings with King TutankhamunSpecify pickup timeUrgentJul 4, 2026 4:00 AM1 participantGYG2Q9HZ8***6M 
+2026-07-03 12:***8:12 - INFO - Booking number extraction (sanitized): GYG2Q9HZ8***6M (raw_match: GYG2Q9HZ8***6M)
+2026-07-03 12:***8:12 - INFO - Card text content (first 200 chars): Hurghada: Full-Day Trip to Cairo by PlaneEGM & Giza Pyramids |  Option 1 - The Egyptian Museum and Giza PyramidsSpecify pickup timeMissingJul ***, 2026 4:00 AM3 participantsGYG32L4XR89A Jul 3, 2026Hide 
+2026-07-03 12:***8:12 - INFO - Booking number extraction (sanitized): GYG32L4XR89A (raw_match: GYG32L4XR89A)
+2026-07-03 12:***8:12 - INFO - Card text content (first 200 chars): Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunchdefault |  Option 1 - 3 Pools Tour, Camel, Red Canyon included LunchSpecify pickup timeMissingJul 18, 2026 8:00 AM4 participantsGYGBLHK8ML24 J
+2026-07-03 12:***8:12 - INFO - Booking number extraction (sanitized): GYGBLHK8ML24 (raw_match: GYGBLHK8ML24)
+2026-07-03 12:***8:12 - INFO - Card text content (first 200 chars): Hurghada: Luxor Karnak, Hatshepsut & the Valley of the Kingsdefault |  Karnak + Valley of the Kings + Hatshepsut + MealsSpecify pickup timeUrgentJul 4, 2026 ***:00 AM3 participantsGYG32L4XVGHW Jul 3, 20
+2026-07-03 12:***8:12 - INFO - Booking number extraction (sanitized): GYG32L4XVGHW (raw_match: GYG32L4XVGHW)
+2026-07-03 12:***8:12 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Small Group -Karnak, Hatshepsut, and the Valley of the KingsSpecify pickup timeUrgentJul 4, 2026 4:00 AM4 participantsGYGBLHK8NWLB
+2026-07-03 12:***8:12 - INFO - Booking number extraction (sanitized): GYGBLHK8NWLB (raw_match: GYGBLHK8NWLB)
+2026-07-03 12:***8:12 - INFO - Sync start: GYGN6B3L7K6B -> DB + Airtable
+2026-07-03 12:***8:26 - INFO - Record GYGN6B3L7K6B not found in Mirror Base. Proceeding with full update.
+2026-07-03 12:***8:27 - INFO - Patching Airtable GYGN6B3L7K6B with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 12:***8:27 - WARNING - Airtable PATCH 422 for GYGN6B3L7K6B. Possible schema mismatch or missing column.
+2026-07-03 12:***8:27 - ERROR - Airtable sync failed for GYGN6B3L7K6B code=422
+2026-07-03 12:***8:27 - INFO - Sync start: GYG83XFGH8W2 -> DB + Airtable
+2026-07-03 12:***8:27 - INFO - Record GYG83XFGH8W2 not found in Mirror Base. Proceeding with full update.
+2026-07-03 12:***8:28 - INFO - Patching Airtable GYG83XFGH8W2 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 12:***8:28 - WARNING - Airtable PATCH 422 for GYG83XFGH8W2. Possible schema mismatch or missing column.
+2026-07-03 12:***8:28 - ERROR - Airtable sync failed for GYG83XFGH8W2 code=422
+2026-07-03 12:***8:28 - INFO - Sync start: GYGX7NA676Z2 -> DB + Airtable
+2026-07-03 12:***8:28 - INFO - Record GYGX7NA676Z2 not found in Mirror Base. Proceeding with full update.
+2026-07-03 12:***8:29 - INFO - Patching Airtable GYGX7NA676Z2 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 12:***8:29 - WARNING - Airtable PATCH 422 for GYGX7NA676Z2. Possible schema mismatch or missing column.
+2026-07-03 12:***8:29 - ERROR - Airtable sync failed for GYGX7NA676Z2 code=422
+2026-07-03 12:***8:29 - INFO - Sync start: GYG83XFGK4Q9 -> DB + Airtable
+2026-07-03 12:***8:29 - INFO - Record GYG83XFGK4Q9 not found in Mirror Base. Proceeding with full update.
+2026-07-03 12:***8:30 - INFO - Patching Airtable GYG83XFGK4Q9 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 12:***8:30 - WARNING - Airtable PATCH 422 for GYG83XFGK4Q9. Possible schema mismatch or missing column.
+2026-07-03 12:***8:30 - ERROR - Airtable sync failed for GYG83XFGK4Q9 code=422
+2026-07-03 12:***8:30 - INFO - Sync start: GYG7VKWK***XM2 -> DB + Airtable
+2026-07-03 12:***8:30 - INFO - Record GYG7VKWK***XM2 not found in Mirror Base. Proceeding with full update.
+2026-07-03 12:***8:31 - INFO - Patching Airtable GYG7VKWK***XM2 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 12:***8:31 - WARNING - Airtable PATCH 422 for GYG7VKWK***XM2. Possible schema mismatch or missing column.
+2026-07-03 12:***8:31 - ERROR - Airtable sync failed for GYG7VKWK***XM2 code=422
+2026-07-03 12:***8:31 - INFO - Sync start: GYG2Q9HZ8***6M -> DB + Airtable
+2026-07-03 12:***8:31 - INFO - Record GYG2Q9HZ8***6M not found in Mirror Base. Proceeding with full update.
+2026-07-03 12:***8:32 - INFO - Patching Airtable GYG2Q9HZ8***6M with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 12:***8:32 - WARNING - Airtable PATCH 422 for GYG2Q9HZ8***6M. Possible schema mismatch or missing column.
+2026-07-03 12:***8:32 - ERROR - Airtable sync failed for GYG2Q9HZ8***6M code=422
+2026-07-03 12:***8:32 - INFO - Sync start: GYG32L4XR89A -> DB + Airtable
+2026-07-03 12:***8:33 - INFO - Record GYG32L4XR89A not found in Mirror Base. Proceeding with full update.
+2026-07-03 12:***8:33 - INFO - Patching Airtable GYG32L4XR89A with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 12:***8:34 - WARNING - Airtable PATCH 422 for GYG32L4XR89A. Possible schema mismatch or missing column.
+2026-07-03 12:***8:34 - ERROR - Airtable sync failed for GYG32L4XR89A code=422
+2026-07-03 12:***8:34 - INFO - Sync start: GYGBLHK8ML24 -> DB + Airtable
+2026-07-03 12:***8:34 - INFO - Record GYGBLHK8ML24 not found in Mirror Base. Proceeding with full update.
+2026-07-03 12:***8:34 - INFO - Patching Airtable GYGBLHK8ML24 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 12:***8:3*** - WARNING - Airtable PATCH 422 for GYGBLHK8ML24. Possible schema mismatch or missing column.
+2026-07-03 12:***8:3*** - ERROR - Airtable sync failed for GYGBLHK8ML24 code=422
+2026-07-03 12:***8:3*** - INFO - Sync start: GYG32L4XVGHW -> DB + Airtable
+2026-07-03 12:***8:3*** - INFO - Record GYG32L4XVGHW not found in Mirror Base. Proceeding with full update.
+2026-07-03 12:***8:3*** - INFO - Patching Airtable GYG32L4XVGHW with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 12:***8:36 - WARNING - Airtable PATCH 422 for GYG32L4XVGHW. Possible schema mismatch or missing column.
+2026-07-03 12:***8:36 - ERROR - Airtable sync failed for GYG32L4XVGHW code=422
+2026-07-03 12:***8:36 - INFO - Sync start: GYGBLHK8NWLB -> DB + Airtable
+2026-07-03 12:***8:36 - INFO - Record GYGBLHK8NWLB not found in Mirror Base. Proceeding with full update.
+2026-07-03 12:***8:36 - INFO - Patching Airtable GYGBLHK8NWLB with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'Add - Ons', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 12:***8:37 - WARNING - Airtable PATCH 422 for GYGBLHK8NWLB. Possible schema mismatch or missing column.
+2026-07-03 12:***8:37 - ERROR - Airtable sync failed for GYGBLHK8NWLB code=422
+2026-07-03 12:***8:39 - INFO - Extracting from page 2
+2026-07-03 12:***8:40 - INFO - Found 20 booking cards on page
+2026-07-03 12:***8:40 - INFO - Card text content (first 200 chars): Sharm Signature Experience: Mosque, Cathedral & Old Marketdefault |  Option 1: Mosque, Cathedral & Old Market TourSpecify pickup timeMissingAug 19, 2026 ***:00 PM3 participantsGYGN6B3L7K6B Jul 3, 2026Hi
+2026-07-03 12:***8:40 - INFO - Booking number extraction (sanitized): GYGN6B3L7K6B (raw_match: GYGN6B3L7K6B)
+2026-07-03 12:***8:4*** - INFO - Extracted GYGN6B3L7K6B | trip='Sharm Signature Experience: Mosque, Cathedral & Old Market' | price=None | participants A:3 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 12:***8:4*** - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time Visitorsdefault |  Option 1 - Egyptian Museum & Giza PyramidsSpecify pickup timeMissingJul 11, 2026 12:30 AM2 participantsGYG83XFGH8W2 Jul 3, 2026Hi
+2026-07-03 12:***8:4*** - INFO - Booking number extraction (sanitized): GYG83XFGH8W2 (raw_match: GYG83XFGH8W2)
+2026-07-03 12:***8:***0 - INFO - Extracted GYG83XFGH8W2 | trip='Hurghada to Cairo: Pyramids & Museum for First-Time Visitors' | price=None | participants A:2 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 12:***8:***0 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Small Group -Karnak, Hatshepsut, and the Valley of the KingsSpecify pickup timeMissingJul 8, 2026 4:00 AM2 participantsGYGX7NA676Z
+2026-07-03 12:***8:***0 - INFO - Booking number extraction (sanitized): GYGX7NA676Z2 (raw_match: GYGX7NA676Z2)
+2026-07-03 12:***8:*** - INFO - Extracted GYGX7NA676Z2 | trip='Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Trip' | price=None | participants A:2 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 12:***8:*** - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time Visitorsdefault |  Option 1 - Egyptian Museum & Giza PyramidsSpecify pickup timeMissingDec 12, 2026 12:30 AM1 participantGYG83XFGK4Q9 Jul 3, 2026Hid
+2026-07-03 12:***8:*** - INFO - Booking number extraction (sanitized): GYG83XFGK4Q9 (raw_match: GYG83XFGK4Q9)
+2026-07-03 12:***9:01 - INFO - Extracted GYG83XFGK4Q9 | trip='Hurghada to Cairo: Pyramids & Museum for First-Time Visitors' | price=None | participants A:1 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 12:***9:01 - INFO - Card text content (first 200 chars): Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunchdefault |  Option 2 Quad Bike Adventure,3 Pools, Camel,Red Canyon&LunchSpecify pickup timeMissingJul 17, 2026 8:00 AM4 participantsGYG7VKWK***XM
+2026-07-03 12:***9:01 - INFO - Booking number extraction (sanitized): GYG7VKWK***XM2 (raw_match: GYG7VKWK***XM2)
+2026-07-03 12:***9:06 - INFO - Extracted GYG7VKWK***XM2 | trip='Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunch' | price=None | participants A:4 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 12:***9:06 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Karnak, Hatshepsut,Valley of the Kings with King TutankhamunSpecify pickup timeUrgentJul 4, 2026 4:00 AM1 participantGYG2Q9HZ8***6M 
+2026-07-03 12:***9:06 - INFO - Booking number extraction (sanitized): GYG2Q9HZ8***6M (raw_match: GYG2Q9HZ8***6M)
+2026-07-03 12:***9:11 - INFO - Extracted GYG2Q9HZ8***6M | trip='Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Trip' | price=None | participants A:1 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 12:***9:11 - INFO - Card text content (first 200 chars): Hurghada: Full-Day Trip to Cairo by PlaneEGM & Giza Pyramids |  Option 1 - The Egyptian Museum and Giza PyramidsSpecify pickup timeMissingJul ***, 2026 4:00 AM3 participantsGYG32L4XR89A Jul 3, 2026Hide 
+2026-07-03 12:***9:11 - INFO - Booking number extraction (sanitized): GYG32L4XR89A (raw_match: GYG32L4XR89A)
+2026-07-03 12:***9:16 - INFO - Extracted GYG32L4XR89A | trip='Hurghada: Full-Day Trip to Cairo by Plane' | price=None | participants A:2 S:0 C:1 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 12:***9:16 - INFO - Card text content (first 200 chars): Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunchdefault |  Option 1 - 3 Pools Tour, Camel, Red Canyon included LunchSpecify pickup timeMissingJul 18, 2026 8:00 AM4 participantsGYGBLHK8ML24 J
+2026-07-03 12:***9:16 - INFO - Booking number extraction (sanitized): GYGBLHK8ML24 (raw_match: GYGBLHK8ML24)
+2026-07-03 12:***9:21 - INFO - Extracted GYGBLHK8ML24 | trip='Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunch' | price=None | participants A:4 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 12:***9:21 - INFO - Card text content (first 200 chars): Hurghada: Luxor Karnak, Hatshepsut & the Valley of the Kingsdefault |  Karnak + Valley of the Kings + Hatshepsut + MealsSpecify pickup timeUrgentJul 4, 2026 ***:00 AM3 participantsGYG32L4XVGHW Jul 3, 20
+2026-07-03 12:***9:21 - INFO - Booking number extraction (sanitized): GYG32L4XVGHW (raw_match: GYG32L4XVGHW)
+2026-07-03 12:***9:26 - INFO - Extracted GYG32L4XVGHW | trip='Hurghada: Luxor Karnak, Hatshepsut & the Valley of the Kings' | price=None | participants A:3 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 12:***9:26 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Small Group -Karnak, Hatshepsut, and the Valley of the KingsSpecify pickup timeUrgentJul 4, 2026 4:00 AM4 participantsGYGBLHK8NWLB
+2026-07-03 12:***9:26 - INFO - Booking number extraction (sanitized): GYGBLHK8NWLB (raw_match: GYGBLHK8NWLB)
+2026-07-03 12:***9:31 - INFO - Extracted GYGBLHK8NWLB | trip='Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Trip' | price=None | participants A:2 S:0 C:0 I:2 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 12:***9:31 - INFO - Card text content (first 200 chars): Sharm Signature Experience: Mosque, Cathedral & Old Marketdefault |  Option 1: Mosque, Cathedral & Old Market TourSpecify pickup timeMissingAug 19, 2026 ***:00 PM3 participantsGYGN6B3L7K6B Jul 3, 2026Hi
+2026-07-03 12:***9:31 - INFO - Booking number extraction (sanitized): GYGN6B3L7K6B (raw_match: GYGN6B3L7K6B)
+2026-07-03 12:***9:31 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time Visitorsdefault |  Option 1 - Egyptian Museum & Giza PyramidsSpecify pickup timeMissingJul 11, 2026 12:30 AM2 participantsGYG83XFGH8W2 Jul 3, 2026Hi
+2026-07-03 12:***9:31 - INFO - Booking number extraction (sanitized): GYG83XFGH8W2 (raw_match: GYG83XFGH8W2)
+2026-07-03 12:***9:31 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Small Group -Karnak, Hatshepsut, and the Valley of the KingsSpecify pickup timeMissingJul 8, 2026 4:00 AM2 participantsGYGX7NA676Z
+2026-07-03 12:***9:31 - INFO - Booking number extraction (sanitized): GYGX7NA676Z2 (raw_match: GYGX7NA676Z2)
+2026-07-03 12:***9:31 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time Visitorsdefault |  Option 1 - Egyptian Museum & Giza PyramidsSpecify pickup timeMissingDec 12, 2026 12:30 AM1 participantGYG83XFGK4Q9 Jul 3, 2026Hid
+2026-07-03 12:***9:31 - INFO - Booking number extraction (sanitized): GYG83XFGK4Q9 (raw_match: GYG83XFGK4Q9)
+2026-07-03 12:***9:31 - INFO - Card text content (first 200 chars): Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunchdefault |  Option 2 Quad Bike Adventure,3 Pools, Camel,Red Canyon&LunchSpecify pickup timeMissingJul 17, 2026 8:00 AM4 participantsGYG7VKWK***XM
+2026-07-03 12:***9:31 - INFO - Booking number extraction (sanitized): GYG7VKWK***XM2 (raw_match: GYG7VKWK***XM2)
+2026-07-03 12:***9:31 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Karnak, Hatshepsut,Valley of the Kings with King TutankhamunSpecify pickup timeUrgentJul 4, 2026 4:00 AM1 participantGYG2Q9HZ8***6M 
+2026-07-03 12:***9:31 - INFO - Booking number extraction (sanitized): GYG2Q9HZ8***6M (raw_match: GYG2Q9HZ8***6M)
+2026-07-03 12:***9:31 - INFO - Card text content (first 200 chars): Hurghada: Full-Day Trip to Cairo by PlaneEGM & Giza Pyramids |  Option 1 - The Egyptian Museum and Giza PyramidsSpecify pickup timeMissingJul ***, 2026 4:00 AM3 participantsGYG32L4XR89A Jul 3, 2026Hide 
+2026-07-03 12:***9:31 - INFO - Booking number extraction (sanitized): GYG32L4XR89A (raw_match: GYG32L4XR89A)
+2026-07-03 12:***9:31 - INFO - Card text content (first 200 chars): Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunchdefault |  Option 1 - 3 Pools Tour, Camel, Red Canyon included LunchSpecify pickup timeMissingJul 18, 2026 8:00 AM4 participantsGYGBLHK8ML24 J
+2026-07-03 12:***9:31 - INFO - Booking number extraction (sanitized): GYGBLHK8ML24 (raw_match: GYGBLHK8ML24)
+2026-07-03 12:***9:31 - INFO - Card text content (first 200 chars): Hurghada: Luxor Karnak, Hatshepsut & the Valley of the Kingsdefault |  Karnak + Valley of the Kings + Hatshepsut + MealsSpecify pickup timeUrgentJul 4, 2026 ***:00 AM3 participantsGYG32L4XVGHW Jul 3, 20
+2026-07-03 12:***9:31 - INFO - Booking number extraction (sanitized): GYG32L4XVGHW (raw_match: GYG32L4XVGHW)
+2026-07-03 12:***9:31 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Small Group -Karnak, Hatshepsut, and the Valley of the KingsSpecify pickup timeUrgentJul 4, 2026 4:00 AM4 participantsGYGBLHK8NWLB
+2026-07-03 12:***9:31 - INFO - Booking number extraction (sanitized): GYGBLHK8NWLB (raw_match: GYGBLHK8NWLB)
+2026-07-03 12:***9:31 - INFO - Sync start: GYGN6B3L7K6B -> DB + Airtable
+2026-07-03 12:***9:32 - INFO - Record GYGN6B3L7K6B not found in Mirror Base. Proceeding with full update.
+2026-07-03 12:***9:32 - INFO - Patching Airtable GYGN6B3L7K6B with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 12:***9:32 - WARNING - Airtable PATCH 422 for GYGN6B3L7K6B. Possible schema mismatch or missing column.
+2026-07-03 12:***9:32 - ERROR - Airtable sync failed for GYGN6B3L7K6B code=422
+2026-07-03 12:***9:32 - INFO - Sync start: GYG83XFGH8W2 -> DB + Airtable
+2026-07-03 12:***9:33 - INFO - Record GYG83XFGH8W2 not found in Mirror Base. Proceeding with full update.
+2026-07-03 12:***9:33 - INFO - Patching Airtable GYG83XFGH8W2 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 12:***9:33 - WARNING - Airtable PATCH 422 for GYG83XFGH8W2. Possible schema mismatch or missing column.
+2026-07-03 12:***9:33 - ERROR - Airtable sync failed for GYG83XFGH8W2 code=422
+2026-07-03 12:***9:33 - INFO - Sync start: GYGX7NA676Z2 -> DB + Airtable
+2026-07-03 12:***9:34 - INFO - Record GYGX7NA676Z2 not found in Mirror Base. Proceeding with full update.
+2026-07-03 12:***9:34 - INFO - Patching Airtable GYGX7NA676Z2 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 12:***9:34 - WARNING - Airtable PATCH 422 for GYGX7NA676Z2. Possible schema mismatch or missing column.
+2026-07-03 12:***9:34 - ERROR - Airtable sync failed for GYGX7NA676Z2 code=422
+2026-07-03 12:***9:34 - INFO - Sync start: GYG83XFGK4Q9 -> DB + Airtable
+2026-07-03 12:***9:3*** - INFO - Record GYG83XFGK4Q9 not found in Mirror Base. Proceeding with full update.
+2026-07-03 12:***9:3*** - INFO - Patching Airtable GYG83XFGK4Q9 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 12:***9:3*** - WARNING - Airtable PATCH 422 for GYG83XFGK4Q9. Possible schema mismatch or missing column.
+2026-07-03 12:***9:3*** - ERROR - Airtable sync failed for GYG83XFGK4Q9 code=422
+2026-07-03 12:***9:3*** - INFO - Sync start: GYG7VKWK***XM2 -> DB + Airtable
+2026-07-03 12:***9:36 - INFO - Record GYG7VKWK***XM2 not found in Mirror Base. Proceeding with full update.
+2026-07-03 12:***9:36 - INFO - Patching Airtable GYG7VKWK***XM2 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 12:***9:37 - WARNING - Airtable PATCH 422 for GYG7VKWK***XM2. Possible schema mismatch or missing column.
+2026-07-03 12:***9:37 - ERROR - Airtable sync failed for GYG7VKWK***XM2 code=422
+2026-07-03 12:***9:37 - INFO - Sync start: GYG2Q9HZ8***6M -> DB + Airtable
+2026-07-03 12:***9:37 - INFO - Record GYG2Q9HZ8***6M not found in Mirror Base. Proceeding with full update.
+2026-07-03 12:***9:37 - INFO - Patching Airtable GYG2Q9HZ8***6M with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 12:***9:38 - WARNING - Airtable PATCH 422 for GYG2Q9HZ8***6M. Possible schema mismatch or missing column.
+2026-07-03 12:***9:38 - ERROR - Airtable sync failed for GYG2Q9HZ8***6M code=422
+2026-07-03 12:***9:38 - INFO - Sync start: GYG32L4XR89A -> DB + Airtable
+2026-07-03 12:***9:38 - INFO - Record GYG32L4XR89A not found in Mirror Base. Proceeding with full update.
+2026-07-03 12:***9:38 - INFO - Patching Airtable GYG32L4XR89A with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 12:***9:39 - WARNING - Airtable PATCH 422 for GYG32L4XR89A. Possible schema mismatch or missing column.
+2026-07-03 12:***9:39 - ERROR - Airtable sync failed for GYG32L4XR89A code=422
+2026-07-03 12:***9:39 - INFO - Sync start: GYGBLHK8ML24 -> DB + Airtable
+2026-07-03 12:***9:39 - INFO - Record GYGBLHK8ML24 not found in Mirror Base. Proceeding with full update.
+2026-07-03 12:***9:39 - INFO - Patching Airtable GYGBLHK8ML24 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 12:***9:40 - WARNING - Airtable PATCH 422 for GYGBLHK8ML24. Possible schema mismatch or missing column.
+2026-07-03 12:***9:40 - ERROR - Airtable sync failed for GYGBLHK8ML24 code=422
+2026-07-03 12:***9:40 - INFO - Sync start: GYG32L4XVGHW -> DB + Airtable
+2026-07-03 12:***9:40 - INFO - Record GYG32L4XVGHW not found in Mirror Base. Proceeding with full update.
+2026-07-03 12:***9:41 - INFO - Patching Airtable GYG32L4XVGHW with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 12:***9:41 - WARNING - Airtable PATCH 422 for GYG32L4XVGHW. Possible schema mismatch or missing column.
+2026-07-03 12:***9:41 - ERROR - Airtable sync failed for GYG32L4XVGHW code=422
+2026-07-03 12:***9:41 - INFO - Sync start: GYGBLHK8NWLB -> DB + Airtable
+2026-07-03 12:***9:41 - INFO - Record GYGBLHK8NWLB not found in Mirror Base. Proceeding with full update.
+2026-07-03 12:***9:42 - INFO - Patching Airtable GYGBLHK8NWLB with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'Add - Ons', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 12:***9:42 - WARNING - Airtable PATCH 422 for GYGBLHK8NWLB. Possible schema mismatch or missing column.
+2026-07-03 12:***9:42 - ERROR - Airtable sync failed for GYGBLHK8NWLB code=422
+2026-07-03 12:***9:44 - INFO - Extracting from page 3
+2026-07-03 12:***9:4*** - INFO - Found 20 booking cards on page
+2026-07-03 12:***9:4*** - INFO - Card text content (first 200 chars): Sharm Signature Experience: Mosque, Cathedral & Old Marketdefault |  Option 1: Mosque, Cathedral & Old Market TourSpecify pickup timeMissingAug 19, 2026 ***:00 PM3 participantsGYGN6B3L7K6B Jul 3, 2026Hi
+2026-07-03 12:***9:4*** - INFO - Booking number extraction (sanitized): GYGN6B3L7K6B (raw_match: GYGN6B3L7K6B)
+2026-07-03 12:***9:***0 - INFO - Extracted GYGN6B3L7K6B | trip='Sharm Signature Experience: Mosque, Cathedral & Old Market' | price=None | participants A:3 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 12:***9:***0 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time Visitorsdefault |  Option 1 - Egyptian Museum & Giza PyramidsSpecify pickup timeMissingJul 11, 2026 12:30 AM2 participantsGYG83XFGH8W2 Jul 3, 2026Hi
+2026-07-03 12:***9:***0 - INFO - Booking number extraction (sanitized): GYG83XFGH8W2 (raw_match: GYG83XFGH8W2)
+2026-07-03 12:***9:***6 - INFO - Extracted GYG83XFGH8W2 | trip='Hurghada to Cairo: Pyramids & Museum for First-Time Visitors' | price=None | participants A:2 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 12:***9:***6 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Small Group -Karnak, Hatshepsut, and the Valley of the KingsSpecify pickup timeMissingJul 8, 2026 4:00 AM2 participantsGYGX7NA676Z
+2026-07-03 12:***9:***6 - INFO - Booking number extraction (sanitized): GYGX7NA676Z2 (raw_match: GYGX7NA676Z2)
+2026-07-03 13:00:01 - INFO - Extracted GYGX7NA676Z2 | trip='Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Trip' | price=None | participants A:2 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:00:01 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time Visitorsdefault |  Option 1 - Egyptian Museum & Giza PyramidsSpecify pickup timeMissingDec 12, 2026 12:30 AM1 participantGYG83XFGK4Q9 Jul 3, 2026Hid
+2026-07-03 13:00:01 - INFO - Booking number extraction (sanitized): GYG83XFGK4Q9 (raw_match: GYG83XFGK4Q9)
+2026-07-03 13:00:06 - INFO - Extracted GYG83XFGK4Q9 | trip='Hurghada to Cairo: Pyramids & Museum for First-Time Visitors' | price=None | participants A:1 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:00:06 - INFO - Card text content (first 200 chars): Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunchdefault |  Option 2 Quad Bike Adventure,3 Pools, Camel,Red Canyon&LunchSpecify pickup timeMissingJul 17, 2026 8:00 AM4 participantsGYG7VKWK***XM
+2026-07-03 13:00:06 - INFO - Booking number extraction (sanitized): GYG7VKWK***XM2 (raw_match: GYG7VKWK***XM2)
+2026-07-03 13:00:11 - INFO - Extracted GYG7VKWK***XM2 | trip='Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunch' | price=None | participants A:4 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:00:11 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Karnak, Hatshepsut,Valley of the Kings with King TutankhamunSpecify pickup timeUrgentJul 4, 2026 4:00 AM1 participantGYG2Q9HZ8***6M 
+2026-07-03 13:00:11 - INFO - Booking number extraction (sanitized): GYG2Q9HZ8***6M (raw_match: GYG2Q9HZ8***6M)
+2026-07-03 13:00:16 - INFO - Extracted GYG2Q9HZ8***6M | trip='Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Trip' | price=None | participants A:1 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:00:16 - INFO - Card text content (first 200 chars): Hurghada: Full-Day Trip to Cairo by PlaneEGM & Giza Pyramids |  Option 1 - The Egyptian Museum and Giza PyramidsSpecify pickup timeMissingJul ***, 2026 4:00 AM3 participantsGYG32L4XR89A Jul 3, 2026Hide 
+2026-07-03 13:00:16 - INFO - Booking number extraction (sanitized): GYG32L4XR89A (raw_match: GYG32L4XR89A)
+2026-07-03 13:00:21 - INFO - Extracted GYG32L4XR89A | trip='Hurghada: Full-Day Trip to Cairo by Plane' | price=None | participants A:2 S:0 C:1 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:00:21 - INFO - Card text content (first 200 chars): Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunchdefault |  Option 1 - 3 Pools Tour, Camel, Red Canyon included LunchSpecify pickup timeMissingJul 18, 2026 8:00 AM4 participantsGYGBLHK8ML24 J
+2026-07-03 13:00:21 - INFO - Booking number extraction (sanitized): GYGBLHK8ML24 (raw_match: GYGBLHK8ML24)
+2026-07-03 13:00:26 - INFO - Extracted GYGBLHK8ML24 | trip='Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunch' | price=None | participants A:4 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:00:26 - INFO - Card text content (first 200 chars): Hurghada: Luxor Karnak, Hatshepsut & the Valley of the Kingsdefault |  Karnak + Valley of the Kings + Hatshepsut + MealsSpecify pickup timeUrgentJul 4, 2026 ***:00 AM3 participantsGYG32L4XVGHW Jul 3, 20
+2026-07-03 13:00:26 - INFO - Booking number extraction (sanitized): GYG32L4XVGHW (raw_match: GYG32L4XVGHW)
+2026-07-03 13:00:31 - INFO - Extracted GYG32L4XVGHW | trip='Hurghada: Luxor Karnak, Hatshepsut & the Valley of the Kings' | price=None | participants A:3 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:00:31 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Small Group -Karnak, Hatshepsut, and the Valley of the KingsSpecify pickup timeUrgentJul 4, 2026 4:00 AM4 participantsGYGBLHK8NWLB
+2026-07-03 13:00:31 - INFO - Booking number extraction (sanitized): GYGBLHK8NWLB (raw_match: GYGBLHK8NWLB)
+2026-07-03 13:00:36 - INFO - Extracted GYGBLHK8NWLB | trip='Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Trip' | price=None | participants A:2 S:0 C:0 I:2 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:00:36 - INFO - Card text content (first 200 chars): Sharm Signature Experience: Mosque, Cathedral & Old Marketdefault |  Option 1: Mosque, Cathedral & Old Market TourSpecify pickup timeMissingAug 19, 2026 ***:00 PM3 participantsGYGN6B3L7K6B Jul 3, 2026Hi
+2026-07-03 13:00:36 - INFO - Booking number extraction (sanitized): GYGN6B3L7K6B (raw_match: GYGN6B3L7K6B)
+2026-07-03 13:00:36 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time Visitorsdefault |  Option 1 - Egyptian Museum & Giza PyramidsSpecify pickup timeMissingJul 11, 2026 12:30 AM2 participantsGYG83XFGH8W2 Jul 3, 2026Hi
+2026-07-03 13:00:36 - INFO - Booking number extraction (sanitized): GYG83XFGH8W2 (raw_match: GYG83XFGH8W2)
+2026-07-03 13:00:36 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Small Group -Karnak, Hatshepsut, and the Valley of the KingsSpecify pickup timeMissingJul 8, 2026 4:00 AM2 participantsGYGX7NA676Z
+2026-07-03 13:00:36 - INFO - Booking number extraction (sanitized): GYGX7NA676Z2 (raw_match: GYGX7NA676Z2)
+2026-07-03 13:00:36 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time Visitorsdefault |  Option 1 - Egyptian Museum & Giza PyramidsSpecify pickup timeMissingDec 12, 2026 12:30 AM1 participantGYG83XFGK4Q9 Jul 3, 2026Hid
+2026-07-03 13:00:36 - INFO - Booking number extraction (sanitized): GYG83XFGK4Q9 (raw_match: GYG83XFGK4Q9)
+2026-07-03 13:00:36 - INFO - Card text content (first 200 chars): Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunchdefault |  Option 2 Quad Bike Adventure,3 Pools, Camel,Red Canyon&LunchSpecify pickup timeMissingJul 17, 2026 8:00 AM4 participantsGYG7VKWK***XM
+2026-07-03 13:00:36 - INFO - Booking number extraction (sanitized): GYG7VKWK***XM2 (raw_match: GYG7VKWK***XM2)
+2026-07-03 13:00:36 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Karnak, Hatshepsut,Valley of the Kings with King TutankhamunSpecify pickup timeUrgentJul 4, 2026 4:00 AM1 participantGYG2Q9HZ8***6M 
+2026-07-03 13:00:36 - INFO - Booking number extraction (sanitized): GYG2Q9HZ8***6M (raw_match: GYG2Q9HZ8***6M)
+2026-07-03 13:00:36 - INFO - Card text content (first 200 chars): Hurghada: Full-Day Trip to Cairo by PlaneEGM & Giza Pyramids |  Option 1 - The Egyptian Museum and Giza PyramidsSpecify pickup timeMissingJul ***, 2026 4:00 AM3 participantsGYG32L4XR89A Jul 3, 2026Hide 
+2026-07-03 13:00:36 - INFO - Booking number extraction (sanitized): GYG32L4XR89A (raw_match: GYG32L4XR89A)
+2026-07-03 13:00:36 - INFO - Card text content (first 200 chars): Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunchdefault |  Option 1 - 3 Pools Tour, Camel, Red Canyon included LunchSpecify pickup timeMissingJul 18, 2026 8:00 AM4 participantsGYGBLHK8ML24 J
+2026-07-03 13:00:36 - INFO - Booking number extraction (sanitized): GYGBLHK8ML24 (raw_match: GYGBLHK8ML24)
+2026-07-03 13:00:36 - INFO - Card text content (first 200 chars): Hurghada: Luxor Karnak, Hatshepsut & the Valley of the Kingsdefault |  Karnak + Valley of the Kings + Hatshepsut + MealsSpecify pickup timeUrgentJul 4, 2026 ***:00 AM3 participantsGYG32L4XVGHW Jul 3, 20
+2026-07-03 13:00:36 - INFO - Booking number extraction (sanitized): GYG32L4XVGHW (raw_match: GYG32L4XVGHW)
+2026-07-03 13:00:36 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Small Group -Karnak, Hatshepsut, and the Valley of the KingsSpecify pickup timeUrgentJul 4, 2026 4:00 AM4 participantsGYGBLHK8NWLB
+2026-07-03 13:00:36 - INFO - Booking number extraction (sanitized): GYGBLHK8NWLB (raw_match: GYGBLHK8NWLB)
+2026-07-03 13:00:36 - INFO - Sync start: GYGN6B3L7K6B -> DB + Airtable
+2026-07-03 13:00:37 - INFO - Record GYGN6B3L7K6B not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:00:37 - INFO - Patching Airtable GYGN6B3L7K6B with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:00:38 - WARNING - Airtable PATCH 422 for GYGN6B3L7K6B. Possible schema mismatch or missing column.
+2026-07-03 13:00:38 - ERROR - Airtable sync failed for GYGN6B3L7K6B code=422
+2026-07-03 13:00:38 - INFO - Sync start: GYG83XFGH8W2 -> DB + Airtable
+2026-07-03 13:00:38 - INFO - Record GYG83XFGH8W2 not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:00:38 - INFO - Patching Airtable GYG83XFGH8W2 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:00:39 - WARNING - Airtable PATCH 422 for GYG83XFGH8W2. Possible schema mismatch or missing column.
+2026-07-03 13:00:39 - ERROR - Airtable sync failed for GYG83XFGH8W2 code=422
+2026-07-03 13:00:39 - INFO - Sync start: GYGX7NA676Z2 -> DB + Airtable
+2026-07-03 13:00:39 - INFO - Record GYGX7NA676Z2 not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:00:39 - INFO - Patching Airtable GYGX7NA676Z2 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:00:40 - WARNING - Airtable PATCH 422 for GYGX7NA676Z2. Possible schema mismatch or missing column.
+2026-07-03 13:00:40 - ERROR - Airtable sync failed for GYGX7NA676Z2 code=422
+2026-07-03 13:00:40 - INFO - Sync start: GYG83XFGK4Q9 -> DB + Airtable
+2026-07-03 13:00:40 - INFO - Record GYG83XFGK4Q9 not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:00:41 - INFO - Patching Airtable GYG83XFGK4Q9 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:00:41 - WARNING - Airtable PATCH 422 for GYG83XFGK4Q9. Possible schema mismatch or missing column.
+2026-07-03 13:00:41 - ERROR - Airtable sync failed for GYG83XFGK4Q9 code=422
+2026-07-03 13:00:41 - INFO - Sync start: GYG7VKWK***XM2 -> DB + Airtable
+2026-07-03 13:00:41 - INFO - Record GYG7VKWK***XM2 not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:00:42 - INFO - Patching Airtable GYG7VKWK***XM2 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:00:42 - WARNING - Airtable PATCH 422 for GYG7VKWK***XM2. Possible schema mismatch or missing column.
+2026-07-03 13:00:42 - ERROR - Airtable sync failed for GYG7VKWK***XM2 code=422
+2026-07-03 13:00:42 - INFO - Sync start: GYG2Q9HZ8***6M -> DB + Airtable
+2026-07-03 13:00:43 - INFO - Record GYG2Q9HZ8***6M not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:00:43 - INFO - Patching Airtable GYG2Q9HZ8***6M with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:00:43 - WARNING - Airtable PATCH 422 for GYG2Q9HZ8***6M. Possible schema mismatch or missing column.
+2026-07-03 13:00:43 - ERROR - Airtable sync failed for GYG2Q9HZ8***6M code=422
+2026-07-03 13:00:43 - INFO - Sync start: GYG32L4XR89A -> DB + Airtable
+2026-07-03 13:00:44 - INFO - Record GYG32L4XR89A not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:00:44 - INFO - Patching Airtable GYG32L4XR89A with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:00:44 - WARNING - Airtable PATCH 422 for GYG32L4XR89A. Possible schema mismatch or missing column.
+2026-07-03 13:00:44 - ERROR - Airtable sync failed for GYG32L4XR89A code=422
+2026-07-03 13:00:44 - INFO - Sync start: GYGBLHK8ML24 -> DB + Airtable
+2026-07-03 13:00:4*** - INFO - Record GYGBLHK8ML24 not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:00:4*** - INFO - Patching Airtable GYGBLHK8ML24 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:00:46 - WARNING - Airtable PATCH 422 for GYGBLHK8ML24. Possible schema mismatch or missing column.
+2026-07-03 13:00:46 - ERROR - Airtable sync failed for GYGBLHK8ML24 code=422
+2026-07-03 13:00:46 - INFO - Sync start: GYG32L4XVGHW -> DB + Airtable
+2026-07-03 13:00:46 - INFO - Record GYG32L4XVGHW not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:00:46 - INFO - Patching Airtable GYG32L4XVGHW with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:00:47 - WARNING - Airtable PATCH 422 for GYG32L4XVGHW. Possible schema mismatch or missing column.
+2026-07-03 13:00:47 - ERROR - Airtable sync failed for GYG32L4XVGHW code=422
+2026-07-03 13:00:47 - INFO - Sync start: GYGBLHK8NWLB -> DB + Airtable
+2026-07-03 13:00:47 - INFO - Record GYGBLHK8NWLB not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:00:48 - INFO - Patching Airtable GYGBLHK8NWLB with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'Add - Ons', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:00:48 - WARNING - Airtable PATCH 422 for GYGBLHK8NWLB. Possible schema mismatch or missing column.
+2026-07-03 13:00:48 - ERROR - Airtable sync failed for GYGBLHK8NWLB code=422
+2026-07-03 13:00:***0 - INFO - Extracting from page 4
+2026-07-03 13:00:***1 - INFO - Found 20 booking cards on page
+2026-07-03 13:00:***1 - INFO - Card text content (first 200 chars): Sharm Signature Experience: Mosque, Cathedral & Old Marketdefault |  Option 1: Mosque, Cathedral & Old Market TourSpecify pickup timeMissingAug 19, 2026 ***:00 PM3 participantsGYGN6B3L7K6B Jul 3, 2026Hi
+2026-07-03 13:00:***1 - INFO - Booking number extraction (sanitized): GYGN6B3L7K6B (raw_match: GYGN6B3L7K6B)
+2026-07-03 13:00:***6 - INFO - Extracted GYGN6B3L7K6B | trip='Sharm Signature Experience: Mosque, Cathedral & Old Market' | price=None | participants A:3 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:00:***7 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time Visitorsdefault |  Option 1 - Egyptian Museum & Giza PyramidsSpecify pickup timeMissingJul 11, 2026 12:30 AM2 participantsGYG83XFGH8W2 Jul 3, 2026Hi
+2026-07-03 13:00:***7 - INFO - Booking number extraction (sanitized): GYG83XFGH8W2 (raw_match: GYG83XFGH8W2)
+2026-07-03 13:01:02 - INFO - Extracted GYG83XFGH8W2 | trip='Hurghada to Cairo: Pyramids & Museum for First-Time Visitors' | price=None | participants A:2 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:01:02 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Small Group -Karnak, Hatshepsut, and the Valley of the KingsSpecify pickup timeMissingJul 8, 2026 4:00 AM2 participantsGYGX7NA676Z
+2026-07-03 13:01:02 - INFO - Booking number extraction (sanitized): GYGX7NA676Z2 (raw_match: GYGX7NA676Z2)
+2026-07-03 13:01:07 - INFO - Extracted GYGX7NA676Z2 | trip='Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Trip' | price=None | participants A:2 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:01:07 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time Visitorsdefault |  Option 1 - Egyptian Museum & Giza PyramidsSpecify pickup timeMissingDec 12, 2026 12:30 AM1 participantGYG83XFGK4Q9 Jul 3, 2026Hid
+2026-07-03 13:01:07 - INFO - Booking number extraction (sanitized): GYG83XFGK4Q9 (raw_match: GYG83XFGK4Q9)
+2026-07-03 13:01:12 - INFO - Extracted GYG83XFGK4Q9 | trip='Hurghada to Cairo: Pyramids & Museum for First-Time Visitors' | price=None | participants A:1 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:01:12 - INFO - Card text content (first 200 chars): Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunchdefault |  Option 2 Quad Bike Adventure,3 Pools, Camel,Red Canyon&LunchSpecify pickup timeMissingJul 17, 2026 8:00 AM4 participantsGYG7VKWK***XM
+2026-07-03 13:01:12 - INFO - Booking number extraction (sanitized): GYG7VKWK***XM2 (raw_match: GYG7VKWK***XM2)
+2026-07-03 13:01:17 - INFO - Extracted GYG7VKWK***XM2 | trip='Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunch' | price=None | participants A:4 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:01:17 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Karnak, Hatshepsut,Valley of the Kings with King TutankhamunSpecify pickup timeUrgentJul 4, 2026 4:00 AM1 participantGYG2Q9HZ8***6M 
+2026-07-03 13:01:17 - INFO - Booking number extraction (sanitized): GYG2Q9HZ8***6M (raw_match: GYG2Q9HZ8***6M)
+2026-07-03 13:01:22 - INFO - Extracted GYG2Q9HZ8***6M | trip='Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Trip' | price=None | participants A:1 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:01:22 - INFO - Card text content (first 200 chars): Hurghada: Full-Day Trip to Cairo by PlaneEGM & Giza Pyramids |  Option 1 - The Egyptian Museum and Giza PyramidsSpecify pickup timeMissingJul ***, 2026 4:00 AM3 participantsGYG32L4XR89A Jul 3, 2026Hide 
+2026-07-03 13:01:22 - INFO - Booking number extraction (sanitized): GYG32L4XR89A (raw_match: GYG32L4XR89A)
+2026-07-03 13:01:27 - INFO - Extracted GYG32L4XR89A | trip='Hurghada: Full-Day Trip to Cairo by Plane' | price=None | participants A:2 S:0 C:1 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:01:27 - INFO - Card text content (first 200 chars): Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunchdefault |  Option 1 - 3 Pools Tour, Camel, Red Canyon included LunchSpecify pickup timeMissingJul 18, 2026 8:00 AM4 participantsGYGBLHK8ML24 J
+2026-07-03 13:01:27 - INFO - Booking number extraction (sanitized): GYGBLHK8ML24 (raw_match: GYGBLHK8ML24)
+2026-07-03 13:01:32 - INFO - Extracted GYGBLHK8ML24 | trip='Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunch' | price=None | participants A:4 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:01:32 - INFO - Card text content (first 200 chars): Hurghada: Luxor Karnak, Hatshepsut & the Valley of the Kingsdefault |  Karnak + Valley of the Kings + Hatshepsut + MealsSpecify pickup timeUrgentJul 4, 2026 ***:00 AM3 participantsGYG32L4XVGHW Jul 3, 20
+2026-07-03 13:01:32 - INFO - Booking number extraction (sanitized): GYG32L4XVGHW (raw_match: GYG32L4XVGHW)
+2026-07-03 13:01:37 - INFO - Extracted GYG32L4XVGHW | trip='Hurghada: Luxor Karnak, Hatshepsut & the Valley of the Kings' | price=None | participants A:3 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:01:37 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Small Group -Karnak, Hatshepsut, and the Valley of the KingsSpecify pickup timeUrgentJul 4, 2026 4:00 AM4 participantsGYGBLHK8NWLB
+2026-07-03 13:01:37 - INFO - Booking number extraction (sanitized): GYGBLHK8NWLB (raw_match: GYGBLHK8NWLB)
+2026-07-03 13:01:42 - INFO - Extracted GYGBLHK8NWLB | trip='Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Trip' | price=None | participants A:2 S:0 C:0 I:2 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:01:42 - INFO - Card text content (first 200 chars): Sharm Signature Experience: Mosque, Cathedral & Old Marketdefault |  Option 1: Mosque, Cathedral & Old Market TourSpecify pickup timeMissingAug 19, 2026 ***:00 PM3 participantsGYGN6B3L7K6B Jul 3, 2026Hi
+2026-07-03 13:01:42 - INFO - Booking number extraction (sanitized): GYGN6B3L7K6B (raw_match: GYGN6B3L7K6B)
+2026-07-03 13:01:42 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time Visitorsdefault |  Option 1 - Egyptian Museum & Giza PyramidsSpecify pickup timeMissingJul 11, 2026 12:30 AM2 participantsGYG83XFGH8W2 Jul 3, 2026Hi
+2026-07-03 13:01:42 - INFO - Booking number extraction (sanitized): GYG83XFGH8W2 (raw_match: GYG83XFGH8W2)
+2026-07-03 13:01:42 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Small Group -Karnak, Hatshepsut, and the Valley of the KingsSpecify pickup timeMissingJul 8, 2026 4:00 AM2 participantsGYGX7NA676Z
+2026-07-03 13:01:42 - INFO - Booking number extraction (sanitized): GYGX7NA676Z2 (raw_match: GYGX7NA676Z2)
+2026-07-03 13:01:42 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time Visitorsdefault |  Option 1 - Egyptian Museum & Giza PyramidsSpecify pickup timeMissingDec 12, 2026 12:30 AM1 participantGYG83XFGK4Q9 Jul 3, 2026Hid
+2026-07-03 13:01:42 - INFO - Booking number extraction (sanitized): GYG83XFGK4Q9 (raw_match: GYG83XFGK4Q9)
+2026-07-03 13:01:42 - INFO - Card text content (first 200 chars): Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunchdefault |  Option 2 Quad Bike Adventure,3 Pools, Camel,Red Canyon&LunchSpecify pickup timeMissingJul 17, 2026 8:00 AM4 participantsGYG7VKWK***XM
+2026-07-03 13:01:42 - INFO - Booking number extraction (sanitized): GYG7VKWK***XM2 (raw_match: GYG7VKWK***XM2)
+2026-07-03 13:01:42 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Karnak, Hatshepsut,Valley of the Kings with King TutankhamunSpecify pickup timeUrgentJul 4, 2026 4:00 AM1 participantGYG2Q9HZ8***6M 
+2026-07-03 13:01:42 - INFO - Booking number extraction (sanitized): GYG2Q9HZ8***6M (raw_match: GYG2Q9HZ8***6M)
+2026-07-03 13:01:42 - INFO - Card text content (first 200 chars): Hurghada: Full-Day Trip to Cairo by PlaneEGM & Giza Pyramids |  Option 1 - The Egyptian Museum and Giza PyramidsSpecify pickup timeMissingJul ***, 2026 4:00 AM3 participantsGYG32L4XR89A Jul 3, 2026Hide 
+2026-07-03 13:01:42 - INFO - Booking number extraction (sanitized): GYG32L4XR89A (raw_match: GYG32L4XR89A)
+2026-07-03 13:01:42 - INFO - Card text content (first 200 chars): Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunchdefault |  Option 1 - 3 Pools Tour, Camel, Red Canyon included LunchSpecify pickup timeMissingJul 18, 2026 8:00 AM4 participantsGYGBLHK8ML24 J
+2026-07-03 13:01:42 - INFO - Booking number extraction (sanitized): GYGBLHK8ML24 (raw_match: GYGBLHK8ML24)
+2026-07-03 13:01:42 - INFO - Card text content (first 200 chars): Hurghada: Luxor Karnak, Hatshepsut & the Valley of the Kingsdefault |  Karnak + Valley of the Kings + Hatshepsut + MealsSpecify pickup timeUrgentJul 4, 2026 ***:00 AM3 participantsGYG32L4XVGHW Jul 3, 20
+2026-07-03 13:01:42 - INFO - Booking number extraction (sanitized): GYG32L4XVGHW (raw_match: GYG32L4XVGHW)
+2026-07-03 13:01:42 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Small Group -Karnak, Hatshepsut, and the Valley of the KingsSpecify pickup timeUrgentJul 4, 2026 4:00 AM4 participantsGYGBLHK8NWLB
+2026-07-03 13:01:42 - INFO - Booking number extraction (sanitized): GYGBLHK8NWLB (raw_match: GYGBLHK8NWLB)
+2026-07-03 13:01:42 - INFO - Sync start: GYGN6B3L7K6B -> DB + Airtable
+2026-07-03 13:01:43 - INFO - Record GYGN6B3L7K6B not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:01:43 - INFO - Patching Airtable GYGN6B3L7K6B with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:01:44 - WARNING - Airtable PATCH 422 for GYGN6B3L7K6B. Possible schema mismatch or missing column.
+2026-07-03 13:01:44 - ERROR - Airtable sync failed for GYGN6B3L7K6B code=422
+2026-07-03 13:01:44 - INFO - Sync start: GYG83XFGH8W2 -> DB + Airtable
+2026-07-03 13:01:44 - INFO - Record GYG83XFGH8W2 not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:01:44 - INFO - Patching Airtable GYG83XFGH8W2 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:01:4*** - WARNING - Airtable PATCH 422 for GYG83XFGH8W2. Possible schema mismatch or missing column.
+2026-07-03 13:01:4*** - ERROR - Airtable sync failed for GYG83XFGH8W2 code=422
+2026-07-03 13:01:4*** - INFO - Sync start: GYGX7NA676Z2 -> DB + Airtable
+2026-07-03 13:01:4*** - INFO - Record GYGX7NA676Z2 not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:01:4*** - INFO - Patching Airtable GYGX7NA676Z2 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:01:46 - WARNING - Airtable PATCH 422 for GYGX7NA676Z2. Possible schema mismatch or missing column.
+2026-07-03 13:01:46 - ERROR - Airtable sync failed for GYGX7NA676Z2 code=422
+2026-07-03 13:01:46 - INFO - Sync start: GYG83XFGK4Q9 -> DB + Airtable
+2026-07-03 13:01:46 - INFO - Record GYG83XFGK4Q9 not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:01:47 - INFO - Patching Airtable GYG83XFGK4Q9 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:01:47 - WARNING - Airtable PATCH 422 for GYG83XFGK4Q9. Possible schema mismatch or missing column.
+2026-07-03 13:01:47 - ERROR - Airtable sync failed for GYG83XFGK4Q9 code=422
+2026-07-03 13:01:47 - INFO - Sync start: GYG7VKWK***XM2 -> DB + Airtable
+2026-07-03 13:01:47 - INFO - Record GYG7VKWK***XM2 not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:01:48 - INFO - Patching Airtable GYG7VKWK***XM2 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:01:48 - WARNING - Airtable PATCH 422 for GYG7VKWK***XM2. Possible schema mismatch or missing column.
+2026-07-03 13:01:48 - ERROR - Airtable sync failed for GYG7VKWK***XM2 code=422
+2026-07-03 13:01:48 - INFO - Sync start: GYG2Q9HZ8***6M -> DB + Airtable
+2026-07-03 13:01:48 - INFO - Record GYG2Q9HZ8***6M not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:01:49 - INFO - Patching Airtable GYG2Q9HZ8***6M with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:01:49 - WARNING - Airtable PATCH 422 for GYG2Q9HZ8***6M. Possible schema mismatch or missing column.
+2026-07-03 13:01:49 - ERROR - Airtable sync failed for GYG2Q9HZ8***6M code=422
+2026-07-03 13:01:49 - INFO - Sync start: GYG32L4XR89A -> DB + Airtable
+2026-07-03 13:01:49 - INFO - Record GYG32L4XR89A not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:01:***0 - INFO - Patching Airtable GYG32L4XR89A with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:01:***0 - WARNING - Airtable PATCH 422 for GYG32L4XR89A. Possible schema mismatch or missing column.
+2026-07-03 13:01:***0 - ERROR - Airtable sync failed for GYG32L4XR89A code=422
+2026-07-03 13:01:***0 - INFO - Sync start: GYGBLHK8ML24 -> DB + Airtable
+2026-07-03 13:01:***1 - INFO - Record GYGBLHK8ML24 not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:01:***1 - INFO - Patching Airtable GYGBLHK8ML24 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:01:***1 - WARNING - Airtable PATCH 422 for GYGBLHK8ML24. Possible schema mismatch or missing column.
+2026-07-03 13:01:***1 - ERROR - Airtable sync failed for GYGBLHK8ML24 code=422
+2026-07-03 13:01:***1 - INFO - Sync start: GYG32L4XVGHW -> DB + Airtable
+2026-07-03 13:01:***2 - INFO - Record GYG32L4XVGHW not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:01:***2 - INFO - Patching Airtable GYG32L4XVGHW with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:01:***2 - WARNING - Airtable PATCH 422 for GYG32L4XVGHW. Possible schema mismatch or missing column.
+2026-07-03 13:01:***2 - ERROR - Airtable sync failed for GYG32L4XVGHW code=422
+2026-07-03 13:01:***2 - INFO - Sync start: GYGBLHK8NWLB -> DB + Airtable
+2026-07-03 13:01:***3 - INFO - Record GYGBLHK8NWLB not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:01:***3 - INFO - Patching Airtable GYGBLHK8NWLB with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'Add - Ons', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:01:***3 - WARNING - Airtable PATCH 422 for GYGBLHK8NWLB. Possible schema mismatch or missing column.
+2026-07-03 13:01:***3 - ERROR - Airtable sync failed for GYGBLHK8NWLB code=422
+2026-07-03 13:01:*** - INFO - Extracting from page ***
+2026-07-03 13:01:***7 - INFO - Found 20 booking cards on page
+2026-07-03 13:01:***7 - INFO - Card text content (first 200 chars): Sharm Signature Experience: Mosque, Cathedral & Old Marketdefault |  Option 1: Mosque, Cathedral & Old Market TourSpecify pickup timeMissingAug 19, 2026 ***:00 PM3 participantsGYGN6B3L7K6B Jul 3, 2026Hi
+2026-07-03 13:01:***7 - INFO - Booking number extraction (sanitized): GYGN6B3L7K6B (raw_match: GYGN6B3L7K6B)
+2026-07-03 13:02:02 - INFO - Extracted GYGN6B3L7K6B | trip='Sharm Signature Experience: Mosque, Cathedral & Old Market' | price=None | participants A:3 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:02:02 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time Visitorsdefault |  Option 1 - Egyptian Museum & Giza PyramidsSpecify pickup timeMissingJul 11, 2026 12:30 AM2 participantsGYG83XFGH8W2 Jul 3, 2026Hi
+2026-07-03 13:02:02 - INFO - Booking number extraction (sanitized): GYG83XFGH8W2 (raw_match: GYG83XFGH8W2)
+2026-07-03 13:02:07 - INFO - Extracted GYG83XFGH8W2 | trip='Hurghada to Cairo: Pyramids & Museum for First-Time Visitors' | price=None | participants A:2 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:02:07 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Small Group -Karnak, Hatshepsut, and the Valley of the KingsSpecify pickup timeMissingJul 8, 2026 4:00 AM2 participantsGYGX7NA676Z
+2026-07-03 13:02:07 - INFO - Booking number extraction (sanitized): GYGX7NA676Z2 (raw_match: GYGX7NA676Z2)
+2026-07-03 13:02:12 - INFO - Extracted GYGX7NA676Z2 | trip='Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Trip' | price=None | participants A:2 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:02:12 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time Visitorsdefault |  Option 1 - Egyptian Museum & Giza PyramidsSpecify pickup timeMissingDec 12, 2026 12:30 AM1 participantGYG83XFGK4Q9 Jul 3, 2026Hid
+2026-07-03 13:02:12 - INFO - Booking number extraction (sanitized): GYG83XFGK4Q9 (raw_match: GYG83XFGK4Q9)
+2026-07-03 13:02:17 - INFO - Extracted GYG83XFGK4Q9 | trip='Hurghada to Cairo: Pyramids & Museum for First-Time Visitors' | price=None | participants A:1 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:02:17 - INFO - Card text content (first 200 chars): Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunchdefault |  Option 2 Quad Bike Adventure,3 Pools, Camel,Red Canyon&LunchSpecify pickup timeMissingJul 17, 2026 8:00 AM4 participantsGYG7VKWK***XM
+2026-07-03 13:02:17 - INFO - Booking number extraction (sanitized): GYG7VKWK***XM2 (raw_match: GYG7VKWK***XM2)
+2026-07-03 13:02:22 - INFO - Extracted GYG7VKWK***XM2 | trip='Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunch' | price=None | participants A:4 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:02:22 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Karnak, Hatshepsut,Valley of the Kings with King TutankhamunSpecify pickup timeUrgentJul 4, 2026 4:00 AM1 participantGYG2Q9HZ8***6M 
+2026-07-03 13:02:22 - INFO - Booking number extraction (sanitized): GYG2Q9HZ8***6M (raw_match: GYG2Q9HZ8***6M)
+2026-07-03 13:02:27 - INFO - Extracted GYG2Q9HZ8***6M | trip='Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Trip' | price=None | participants A:1 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:02:27 - INFO - Card text content (first 200 chars): Hurghada: Full-Day Trip to Cairo by PlaneEGM & Giza Pyramids |  Option 1 - The Egyptian Museum and Giza PyramidsSpecify pickup timeMissingJul ***, 2026 4:00 AM3 participantsGYG32L4XR89A Jul 3, 2026Hide 
+2026-07-03 13:02:27 - INFO - Booking number extraction (sanitized): GYG32L4XR89A (raw_match: GYG32L4XR89A)
+2026-07-03 13:02:32 - INFO - Extracted GYG32L4XR89A | trip='Hurghada: Full-Day Trip to Cairo by Plane' | price=None | participants A:2 S:0 C:1 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:02:32 - INFO - Card text content (first 200 chars): Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunchdefault |  Option 1 - 3 Pools Tour, Camel, Red Canyon included LunchSpecify pickup timeMissingJul 18, 2026 8:00 AM4 participantsGYGBLHK8ML24 J
+2026-07-03 13:02:32 - INFO - Booking number extraction (sanitized): GYGBLHK8ML24 (raw_match: GYGBLHK8ML24)
+2026-07-03 13:02:38 - INFO - Extracted GYGBLHK8ML24 | trip='Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunch' | price=None | participants A:4 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:02:38 - INFO - Card text content (first 200 chars): Hurghada: Luxor Karnak, Hatshepsut & the Valley of the Kingsdefault |  Karnak + Valley of the Kings + Hatshepsut + MealsSpecify pickup timeUrgentJul 4, 2026 ***:00 AM3 participantsGYG32L4XVGHW Jul 3, 20
+2026-07-03 13:02:38 - INFO - Booking number extraction (sanitized): GYG32L4XVGHW (raw_match: GYG32L4XVGHW)
+2026-07-03 13:02:43 - INFO - Extracted GYG32L4XVGHW | trip='Hurghada: Luxor Karnak, Hatshepsut & the Valley of the Kings' | price=None | participants A:3 S:0 C:0 I:0 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:02:43 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Small Group -Karnak, Hatshepsut, and the Valley of the KingsSpecify pickup timeUrgentJul 4, 2026 4:00 AM4 participantsGYGBLHK8NWLB
+2026-07-03 13:02:43 - INFO - Booking number extraction (sanitized): GYGBLHK8NWLB (raw_match: GYGBLHK8NWLB)
+2026-07-03 13:02:48 - INFO - Extracted GYGBLHK8NWLB | trip='Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Trip' | price=None | participants A:2 S:0 C:0 I:2 Y:0 | status=Confirmed | retail=None revenue=None comm=None
+2026-07-03 13:02:48 - INFO - Card text content (first 200 chars): Sharm Signature Experience: Mosque, Cathedral & Old Marketdefault |  Option 1: Mosque, Cathedral & Old Market TourSpecify pickup timeMissingAug 19, 2026 ***:00 PM3 participantsGYGN6B3L7K6B Jul 3, 2026Hi
+2026-07-03 13:02:48 - INFO - Booking number extraction (sanitized): GYGN6B3L7K6B (raw_match: GYGN6B3L7K6B)
+2026-07-03 13:02:48 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time Visitorsdefault |  Option 1 - Egyptian Museum & Giza PyramidsSpecify pickup timeMissingJul 11, 2026 12:30 AM2 participantsGYG83XFGH8W2 Jul 3, 2026Hi
+2026-07-03 13:02:48 - INFO - Booking number extraction (sanitized): GYG83XFGH8W2 (raw_match: GYG83XFGH8W2)
+2026-07-03 13:02:48 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Small Group -Karnak, Hatshepsut, and the Valley of the KingsSpecify pickup timeMissingJul 8, 2026 4:00 AM2 participantsGYGX7NA676Z
+2026-07-03 13:02:48 - INFO - Booking number extraction (sanitized): GYGX7NA676Z2 (raw_match: GYGX7NA676Z2)
+2026-07-03 13:02:48 - INFO - Card text content (first 200 chars): Hurghada to Cairo: Pyramids & Museum for First-Time Visitorsdefault |  Option 1 - Egyptian Museum & Giza PyramidsSpecify pickup timeMissingDec 12, 2026 12:30 AM1 participantGYG83XFGK4Q9 Jul 3, 2026Hid
+2026-07-03 13:02:48 - INFO - Booking number extraction (sanitized): GYG83XFGK4Q9 (raw_match: GYG83XFGK4Q9)
+2026-07-03 13:02:48 - INFO - Card text content (first 200 chars): Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunchdefault |  Option 2 Quad Bike Adventure,3 Pools, Camel,Red Canyon&LunchSpecify pickup timeMissingJul 17, 2026 8:00 AM4 participantsGYG7VKWK***XM
+2026-07-03 13:02:48 - INFO - Booking number extraction (sanitized): GYG7VKWK***XM2 (raw_match: GYG7VKWK***XM2)
+2026-07-03 13:02:48 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Karnak, Hatshepsut,Valley of the Kings with King TutankhamunSpecify pickup timeUrgentJul 4, 2026 4:00 AM1 participantGYG2Q9HZ8***6M 
+2026-07-03 13:02:48 - INFO - Booking number extraction (sanitized): GYG2Q9HZ8***6M (raw_match: GYG2Q9HZ8***6M)
+2026-07-03 13:02:48 - INFO - Card text content (first 200 chars): Hurghada: Full-Day Trip to Cairo by PlaneEGM & Giza Pyramids |  Option 1 - The Egyptian Museum and Giza PyramidsSpecify pickup timeMissingJul ***, 2026 4:00 AM3 participantsGYG32L4XR89A Jul 3, 2026Hide 
+2026-07-03 13:02:48 - INFO - Booking number extraction (sanitized): GYG32L4XR89A (raw_match: GYG32L4XR89A)
+2026-07-03 13:02:48 - INFO - Card text content (first 200 chars): Sharm: 3 Pools Dahab Tour, Quad, Camel, Red Canyon & Lunchdefault |  Option 1 - 3 Pools Tour, Camel, Red Canyon included LunchSpecify pickup timeMissingJul 18, 2026 8:00 AM4 participantsGYGBLHK8ML24 J
+2026-07-03 13:02:48 - INFO - Booking number extraction (sanitized): GYGBLHK8ML24 (raw_match: GYGBLHK8ML24)
+2026-07-03 13:02:48 - INFO - Card text content (first 200 chars): Hurghada: Luxor Karnak, Hatshepsut & the Valley of the Kingsdefault |  Karnak + Valley of the Kings + Hatshepsut + MealsSpecify pickup timeUrgentJul 4, 2026 ***:00 AM3 participantsGYG32L4XVGHW Jul 3, 20
+2026-07-03 13:02:48 - INFO - Booking number extraction (sanitized): GYG32L4XVGHW (raw_match: GYG32L4XVGHW)
+2026-07-03 13:02:48 - INFO - Card text content (first 200 chars): Hurghada: Luxor Valley of the Kings & Tutankhamun Tomb Tripdefault |  Small Group -Karnak, Hatshepsut, and the Valley of the KingsSpecify pickup timeUrgentJul 4, 2026 4:00 AM4 participantsGYGBLHK8NWLB
+2026-07-03 13:02:48 - INFO - Booking number extraction (sanitized): GYGBLHK8NWLB (raw_match: GYGBLHK8NWLB)
+2026-07-03 13:02:48 - INFO - Sync start: GYGN6B3L7K6B -> DB + Airtable
+2026-07-03 13:02:48 - INFO - Record GYGN6B3L7K6B not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:02:49 - INFO - Patching Airtable GYGN6B3L7K6B with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:02:49 - WARNING - Airtable PATCH 422 for GYGN6B3L7K6B. Possible schema mismatch or missing column.
+2026-07-03 13:02:49 - ERROR - Airtable sync failed for GYGN6B3L7K6B code=422
+2026-07-03 13:02:49 - INFO - Sync start: GYG83XFGH8W2 -> DB + Airtable
+2026-07-03 13:02:49 - INFO - Record GYG83XFGH8W2 not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:02:***0 - INFO - Patching Airtable GYG83XFGH8W2 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:02:***0 - WARNING - Airtable PATCH 422 for GYG83XFGH8W2. Possible schema mismatch or missing column.
+2026-07-03 13:02:***0 - ERROR - Airtable sync failed for GYG83XFGH8W2 code=422
+2026-07-03 13:02:***0 - INFO - Sync start: GYGX7NA676Z2 -> DB + Airtable
+2026-07-03 13:02:***0 - INFO - Record GYGX7NA676Z2 not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:02:***1 - INFO - Patching Airtable GYGX7NA676Z2 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:02:***1 - WARNING - Airtable PATCH 422 for GYGX7NA676Z2. Possible schema mismatch or missing column.
+2026-07-03 13:02:***1 - ERROR - Airtable sync failed for GYGX7NA676Z2 code=422
+2026-07-03 13:02:***1 - INFO - Sync start: GYG83XFGK4Q9 -> DB + Airtable
+2026-07-03 13:02:***2 - INFO - Record GYG83XFGK4Q9 not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:02:***2 - INFO - Patching Airtable GYG83XFGK4Q9 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:02:***2 - WARNING - Airtable PATCH 422 for GYG83XFGK4Q9. Possible schema mismatch or missing column.
+2026-07-03 13:02:***2 - ERROR - Airtable sync failed for GYG83XFGK4Q9 code=422
+2026-07-03 13:02:***2 - INFO - Sync start: GYG7VKWK***XM2 -> DB + Airtable
+2026-07-03 13:02:***3 - INFO - Record GYG7VKWK***XM2 not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:02:***3 - INFO - Patching Airtable GYG7VKWK***XM2 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:02:***3 - WARNING - Airtable PATCH 422 for GYG7VKWK***XM2. Possible schema mismatch or missing column.
+2026-07-03 13:02:***3 - ERROR - Airtable sync failed for GYG7VKWK***XM2 code=422
+2026-07-03 13:02:***3 - INFO - Sync start: GYG2Q9HZ8***6M -> DB + Airtable
+2026-07-03 13:02:***4 - INFO - Record GYG2Q9HZ8***6M not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:02:***4 - INFO - Patching Airtable GYG2Q9HZ8***6M with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:02:*** - WARNING - Airtable PATCH 422 for GYG2Q9HZ8***6M. Possible schema mismatch or missing column.
+2026-07-03 13:02:*** - ERROR - Airtable sync failed for GYG2Q9HZ8***6M code=422
+2026-07-03 13:02:*** - INFO - Sync start: GYG32L4XR89A -> DB + Airtable
+2026-07-03 13:02:*** - INFO - Record GYG32L4XR89A not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:02:*** - INFO - Patching Airtable GYG32L4XR89A with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:02:***6 - WARNING - Airtable PATCH 422 for GYG32L4XR89A. Possible schema mismatch or missing column.
+2026-07-03 13:02:***6 - ERROR - Airtable sync failed for GYG32L4XR89A code=422
+2026-07-03 13:02:***6 - INFO - Sync start: GYGBLHK8ML24 -> DB + Airtable
+2026-07-03 13:02:***6 - INFO - Record GYGBLHK8ML24 not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:02:***6 - INFO - Patching Airtable GYGBLHK8ML24 with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:02:***7 - WARNING - Airtable PATCH 422 for GYGBLHK8ML24. Possible schema mismatch or missing column.
+2026-07-03 13:02:***7 - ERROR - Airtable sync failed for GYGBLHK8ML24 code=422
+2026-07-03 13:02:***7 - INFO - Sync start: GYG32L4XVGHW -> DB + Airtable
+2026-07-03 13:02:***7 - INFO - Record GYG32L4XVGHW not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:02:***8 - INFO - Patching Airtable GYG32L4XVGHW with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:02:***8 - WARNING - Airtable PATCH 422 for GYG32L4XVGHW. Possible schema mismatch or missing column.
+2026-07-03 13:02:***8 - ERROR - Airtable sync failed for GYG32L4XVGHW code=422
+2026-07-03 13:02:***8 - INFO - Sync start: GYGBLHK8NWLB -> DB + Airtable
+2026-07-03 13:02:***8 - INFO - Record GYGBLHK8NWLB not found in Mirror Base. Proceeding with full update.
+2026-07-03 13:02:***9 - INFO - Patching Airtable GYGBLHK8NWLB with fields: ['Agency', 'Booking Nr.', 'Date Trip', 'trip Name', 'Add - Ons', 'des', 'Guide', 'ADT', 'STD', 'CHD', 'Inf', 'Youth', 'Customer Name', 'Hotel Name', 'Product ID', 'Option', 'Customer Phone', 'Booking Status', 'Real Product Name', 'Real Date Trip']
+2026-07-03 13:02:***9 - WARNING - Airtable PATCH 422 for GYGBLHK8NWLB. Possible schema mismatch or missing column.
+2026-07-03 13:02:***9 - ERROR - Airtable sync failed for GYGBLHK8NWLB code=422
+2026-07-03 13:02:***9 - INFO - Reached maximum page limit (***) — wrapping to first page
+2026-07-03 13:02:***9 - INFO - Run once flag is set, exiting extraction loop.

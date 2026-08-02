@@ -2356,6 +2356,8 @@ class GYGUnifiedSystem:
         except Exception:
             pass
         
+        last_page_first_booking_id = None
+        
         while True:
             ok = await self.check_session()
             if not ok:
@@ -2398,8 +2400,30 @@ class GYGUnifiedSystem:
                 await self._navigate_to_first_page()
                 page_num = 1
                 self.current_page = 1
+                last_page_first_booking_id = None
                 continue
                 
+            if bookings and len(bookings) > 0:
+                current_first_id = bookings[0].get('booking_nr')
+                if current_first_id and current_first_id == last_page_first_booking_id:
+                    self.logger.warning(f"Extracted same first booking ({current_first_id}) on page {page_num}. Likely reached the end.")
+                    bookings = [] # Clear bookings to force end of pagination logic
+                else:
+                    last_page_first_booking_id = current_first_id
+
+            if not bookings:
+                if getattr(self, "run_once_flag", False):
+                    self.logger.info("Run once flag is set, exiting extraction loop.")
+                    break
+                if self.restart_delay_minutes > 0:
+                    self.logger.info(f"Cycle complete. Waiting {self.restart_delay_minutes} minutes before restarting...")
+                    await asyncio.sleep(self.restart_delay_minutes * 60)
+                await self._navigate_to_first_page()
+                page_num = 1
+                self.current_page = 1
+                last_page_first_booking_id = None
+                continue
+
             for b in bookings:
                 if await self.sync_booking(b):
                     total_synced += 1
@@ -2503,18 +2527,50 @@ class GYGUnifiedSystem:
             return False
 
     async def _navigate_next_page(self) -> bool:
+        # Get the current first booking text to detect when the page actually updates
+        old_first_card_text = ""
+        try:
+            first_card = await self.page.query_selector('[data-testid="booking-card"], article[class*="Card"]')
+            if first_card:
+                old_first_card_text = await first_card.text_content() or ""
+        except Exception:
+            pass
+
         # 1. Try clicking Next button
         try:
             next_btn = await self.page.query_selector('button:has-text("Next Page")')
             if not next_btn:
                 next_btn = await self.page.query_selector('button:has-text("Next")')
             if next_btn:
+                is_disabled = await self.page.evaluate("(btn) => btn.disabled || btn.hasAttribute('disabled') || btn.classList.contains('disabled') || btn.classList.contains('p-disabled')", next_btn)
+                if is_disabled:
+                    self.logger.info("Next button is disabled. Reached the last page.")
+                    return False
+                
                 await next_btn.click()
                 try:
                     await self.page.wait_for_load_state('domcontentloaded', timeout=5000)
-                    await asyncio.sleep(2)
+                    
+                    page_changed = False
+                    # Wait for SPA table to update by checking if the first card changed
+                    for _ in range(10):
+                        await asyncio.sleep(1)
+                        try:
+                            new_first_card = await self.page.query_selector('[data-testid="booking-card"], article[class*="Card"]')
+                            if new_first_card:
+                                new_text = await new_first_card.text_content() or ""
+                                if new_text != old_first_card_text:
+                                    self.logger.info("Page content updated successfully after click.")
+                                    page_changed = True
+                                    break
+                        except Exception:
+                            pass
+                    
+                    if not page_changed:
+                        self.logger.warning("Clicked Next but DOM didn't change. Falling back to specific page navigation.")
+                        raise Exception("DOM not updated")
                 except Exception:
-                    pass
+                    raise Exception("DOM not updated or load timeout")
                 return True
         except Exception:
             pass
@@ -2542,6 +2598,15 @@ class GYGUnifiedSystem:
             
         return False
     async def _navigate_to_page(self, page_number: int) -> bool:
+        # Get the current first booking text to detect when the page actually updates
+        old_first_card_text = ""
+        try:
+            first_card = await self.page.query_selector('[data-testid="booking-card"], article[class*="Card"]')
+            if first_card:
+                old_first_card_text = await first_card.text_content() or ""
+        except Exception:
+            pass
+
         # 1. Try specific page button
         try:
             page_button = await self.page.query_selector(f'button[aria-label="Page {page_number}"]')
@@ -2560,12 +2625,30 @@ class GYGUnifiedSystem:
                 try:
                     self.logger.info(f"Clicked page {page_number} button")
                     await self.page.wait_for_load_state('domcontentloaded', timeout=5000)
-                    await asyncio.sleep(2)
+                    
+                    page_changed = False
+                    # Wait for SPA table to update by checking if the first card changed
+                    for _ in range(10):
+                        await asyncio.sleep(1)
+                        try:
+                            new_first_card = await self.page.query_selector('[data-testid="booking-card"], article[class*="Card"]')
+                            if new_first_card:
+                                new_text = await new_first_card.text_content() or ""
+                                if new_text != old_first_card_text:
+                                    self.logger.info(f"Page content updated successfully to page {page_number}.")
+                                    page_changed = True
+                                    break
+                        except Exception:
+                            pass
+                            
+                    if not page_changed:
+                        self.logger.warning(f"Clicked page {page_number} but DOM didn't change. Falling back to URL navigation.")
+                        raise Exception("DOM not updated")
                 except Exception:
-                    await asyncio.sleep(1)
+                    raise Exception("DOM not updated or timeout")
                 return True
         except Exception:
-             pass
+            pass
 
         # 2. URL Fallback
         try:
